@@ -1,0 +1,526 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    background-color: #F2F5F7;
+}
+
+#content {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+
+}
+
+@media only screen and (max-width: 768px) {
+    #slide-show {
+        display: none;
+    }
+
+    #top {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and(max-width:992px) {
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+    #slide-show {
+        display: block;
+    }
+
+    #top {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    #slide-show {
+        display: block;
+    }
+
+    #top {
+        display: block;
+    }
+}
+
+/*--------------------------------*/
+#Dau_Trang_Web {
+    width: 100%;
+    height: 32px;
+    background-color: #f3f3f3;
+    color: #66645c;
+    font-size: 13px;
+}
+
+#container {
+    width: 1180px;
+    height: 18px;
+    color: #66645c;
+    font-size: 14px;
+    margin: 0px 169.6px;
+}
+
+#container a {
+    color: #66645c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 0px 25px 10px 0px;
+    text-align: left;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+#container a:hover {
+    cursor: text;
+}
+
+#container a img {
+    width: 16px;
+    height: 16px;
+    color: #66645c;
+    display: inline;
+    line-height: 16px;
+    margin: 5px 5px 0px 0px;
+    text-align: left
+}
+
+#top_panel {
+    width: 100%;
+    height: 83px;
+    background-color: #ffffff;
+    color: #66645c;
+    font-size: 13px;
+    padding: 15px 0px 5px;
+    align-items: center;
+    position: relative;
+}
+
+#row1 {
+    width: 1180px;
+    height: 53px;
+
+    color: #66645c;
+    font-size: 13px;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo {
+    width: 276px;
+    height: 53px;
+    color: #66645c;
+    font-size: 13px;
+    padding: 0px 0px 20px;
+    text-align: left;
+    float: left;
+    margin-top: 5px;
+}
+
+#Tim_Kiem {
+    width: 904px;
+    height: 53px;
+    float: right;
+
+
+}
+
+#Tim_Kiem img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+#txtsearch {
+    width: 503px;
+    height: 34px;
+    border-radius: 15px;
+    color: #676767;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 10px 3px 0px 10px;
+    padding: 0px 100px 0px 50px;
+    z-index: 0;
+}
+
+#btnsearch {
+    width: 85px;
+    height: 28px;
+    align-items: flex-start;
+    background-color: #057a45;
+    border-radius: 30px;
+    box-shadow: #ffffff 0px 1px 0px 0px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: #ffffff 0px 1px 1px;
+}
+
+#btnsearch:hover {
+    cursor: pointer;
+}
+
+#Tim_Kiem a {
+    width: 48px;
+    height: 47px;
+    border-radius: 50%;
+    color: #0b703d;
+    display: inline;
+    font-size: 26px;
+    line-height: 26px;
+    margin: 0px 20px 0px 0px;
+    padding: 10px;
+    text-align: center
+}
+
+#Tim_Kiem a img {
+    width: 48px;
+    height: 47px;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+#Dang_Nhap_Va_Dang_Ky {
+    width: 148px;
+    height: 53px;
+    float: right;
+
+    color: #66645c;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: left;
+
+}
+
+#Dang_Nhap_Va_Dang_Ky a {
+
+    color: #0f0f0f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 12px;
+    margin: 10px 0px 50px;
+    padding: 0px 6px;
+    text-align: left;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+#header1 {
+    width: 100%;
+    height: 620px;
+    background-position: 50% 0%;
+    color: #66645c;
+    font-size: 13px;
+
+}
+
+#header {
+    width: 100%;
+    height: 45px;
+    background-color: #057a45;
+
+}
+
+.container {
+    max-width: 1175px;
+    margin: 0px auto;
+}
+
+nav {
+    display: flex;
+    float: left;
+    padding-left: 170px;
+}
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu li a {
+    position: relative;
+}
+
+#main-menu li a {
+    text-decoration: none;
+    display: block;
+    padding: 16px 20px;
+    color: #0f0f0f;
+}
+
+#main-menu li a:hover {
+    color: #08a557;
+}
+
+#main-menu ul.sub-menu {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 15px 0px;
+    list-style: none;
+    width: 250px;
+    border: 1px solid #66645c;
+    display: none;
+}
+
+#main-menu li:hover>ul.sub-menu {
+    display: block;
+}
+
+#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #66645c;
+    left: 0;
+}
+
+#main-menu ul.sub-menu li:hover>a {
+    border-bottom: 1px solid #c0bebc;
+}
+
+#main-menu ul.sub-menu li:last-child a {
+    border: none;
+}
+
+#main-menu ul.sub-menu li:first-child a {
+    padding: 8px 15px;
+}
+
+#main-menu ul.sub-menu li:last-child a {
+    padding: 8px 15px;
+}
+
+#main-menu ul.sub-menu ul.sub-menu {
+    left: 249px;
+    top: 0px;
+}
+
+/* Thiết lập border khi hover */
+#main-menu>li>a {
+    position: relative;
+}
+
+#main-menu>li>a::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #08a557;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before {
+    width: 100%;
+}
+
+/* #main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f107";
+    color: #ff0000;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    padding: 18px 0px;
+}
+#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f105";
+    color: #ff0000;
+    position: absolute;
+    top:0px;
+    right: 10px;
+    padding: 8px 0px;
+} */
+.popover-content {
+    width: 980px;
+    height: 590px;
+    color: #66645c;
+    font-size: 13px;
+    padding: 15px 35px;
+
+    text-transform: capitalize;
+}
+
+#Ho_Tro {
+    float: right;
+    height: 100%;
+    padding-right: 180px;
+    padding-top: 10px;
+}
+
+#Ho_Tro a {
+    width: 100px;
+    height: 100%;
+    color: #ffffff;
+
+}
+
+#Ho_Tro a img {
+    width: 20px;
+    height: 20px;
+
+}
+
+#Ho_Tro_Truc_Tuyen {
+    text-decoration: none;
+}
+
+#tygh_content
+{
+    width: 1519px;
+    height: 3145px;
+    color:#66645c;
+font-size:13px;
+background-color:#08a557;
+margin-top: 35px;
+}
+#breadcrumbs
+{
+    width: 1180px;
+    height: 25px;
+    color:#66645c;
+font-size:13px;
+margin:10px 0px 0px;
+
+margin: 0px auto;
+}
+#breadcrumbs span
+{
+    min-width: none;
+    height: 20px;
+    color:#232323;
+display:inline;
+font-size:13px;
+line-height:15.6px;
+padding:2px;
+text-align:left;
+}
