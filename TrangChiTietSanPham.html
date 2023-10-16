@@ -1,222 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <title>Sapiens - Lược Sử Loài Người</title>
-        <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
-        <link rel="stylesheet" type="text/css" href="TrangChiTietSanPham.css" />
-        <script type="text/javascript" src="myScript.js"></script>
-        <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                //Tìm tất cả các li có sub-menu và thêm vào nó class has-child
-                $('.sub-menu').parent('li').addClass('has-child')
-            });
-        </script>
-    </head>
-    <body>
-        <div id="Dau_Trang_Web">
-            <div id="container">
-                <a style="width: 108px;height: 14px; text-align: left;"><img src="HinhAnh/cargo-truck.png">Miễn phí giao
-                    hàng</a>
-                <span style="text-align: left;">|</span>
-                <a style="width: 79px;height: 14px; text-align: left; margin-left: 10px;"><img src="HinhAnh/book.png">80.000
-                    tựa sách</a>
-                <span style="text-align: left;">|</span>
-                <a style="width: 82px;height: 14px; text-align: left; margin-left: 10px;"><img
-                        src="HinhAnh/smartphone-call.png">Vinabook Reader</a>
-            </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Sapiens - Lược Sử Loài Người</title>
+    <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
+    <link rel="stylesheet" type="text/css" href="TrangChiTietSanPham.css" />
+    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Tìm tất cả các li có sub-menu và thêm vào nó class has-child
+            $('.sub-menu').parent('li').addClass('has-child')
+        });
+    </script>
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+</head>
+
+<body>
+    <div id="Dau_Trang_Web">
+        <div id="container">
+            <a style="width: 108px;height: 14px; text-align: left;"><img src="HinhAnh/cargo-truck.png">Miễn phí giao
+                hàng</a>
+            <span style="text-align: left;">|</span>
+            <a style="width: 79px;height: 14px; text-align: left; margin-left: 10px;"><img src="HinhAnh/book.png">80.000
+                tựa sách</a>
+            <span style="text-align: left;">|</span>
+            <a style="width: 82px;height: 14px; text-align: left; margin-left: 10px;"><img
+                    src="HinhAnh/smartphone-call.png">Vinabook Reader</a>
         </div>
-        <div id="top_panel">
-            <div id="row1">
-                <div id="logo">
-                    <img src="HinhAnh/vnb_logo_2x.png">
-                </div>
-                <div id="Tim_Kiem">
-                    <img src="HinhAnh/search.png">
-                    <input type="text" style="margin-top: 10px;" id="txtsearch" name="txtsearch"
-                        placeholder="Tìm kiếm tựa sách, tác giả">
-                    <input type="button" style="border: none;" id="btnsearch" name="fname" value="Tìm sách">
-                    <a href="GioHang.html">
-                        <img src="HinhAnh/icons8-cart-64.png">
-                    </a>
-                    <div id="Dang_Nhap_Va_Dang_Ky">
-                        <a href="Login.html" style="width: 83px;height:13px;">Đăng nhập</a>
-                        <span style="text-align: right;padding-top: 17px;">|</span>
-                        <a href="SignIn.html" style="width: 65px;height:13px;">Đăng ký</a>
-                    </div>
-                </div>
-    
+    </div>
+    <div id="top_panel">
+        <div id="row1">
+            <div id="logo">
+                <img src="HinhAnh/vnb_logo_2x.png">
             </div>
+            <div id="Tim_Kiem">
+                <img src="HinhAnh/search.png">
+                <input type="text" style="margin-top: 10px;" id="txtsearch" name="txtsearch"
+                    placeholder="Tìm kiếm tựa sách, tác giả">
+                <input type="button" style="border: none;" id="btnsearch" name="fname" value="Tìm sách">
+                <a href="GioHang.html">
+                    <img src="HinhAnh/icons8-cart-64.png">
+                </a>
+                <div id="Dang_Nhap_Va_Dang_Ky">
+                    <a href="Login.html" style="width: 83px;height:13px;">Đăng nhập</a>
+                    <span style="text-align: right;padding-top: 17px;">|</span>
+                    <a href="SignIn.html" style="width: 65px;height:13px;">Đăng ký</a>
+                </div>
+            </div>
+
         </div>
-        <div id="header1">
-            <div id="header">
-                <nav class="container">
-                    <!-- <a href="" id="logo_menu">
+    </div>
+    <div id="header1">
+        <div id="header">
+            <nav class="container">
+                <!-- <a href="" id="logo_menu">
                             <img src="HinhAnh/icons8-list-50.png" style="width: 30px; height: 30px;margin-top: 7px;">
                         </a> -->
-                    <ul id="main-menu">
-                        <li>
-                            <img src="HinhAnh/icons8-list-50.png"
-                                style="width: 30px; height: 30px;margin-top: 7px;float: left;">
-                            <a href="#" style="color: #f3f3f3;width: 150px; margin-left: 60px;">Danh Mục Sách</a>
-                            <ul class="sub-menu">
-                                <li><a href="">Sách Tiếng Việt</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Văn Học</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">Tác Phẩm Kinh Điển</a></li>
-                                                <li><a href="">Tiểu Thuyết</a></li>
-                                                <li><a href="">Truyện Ngắn - Tản Văn - Tạp Văn</a></li>
-                                                <li><a href="">Light Novel</a></li>
-                                                <li><a href="">Ngôn Tình</a></li>
-                                                <li><a href="">Du Ký</a></li>
-                                                <li><a href="">Thơ Ca - Ca Dao - Thành Ngữ - Tục Ngữ</a></li>
-                                                <li><a href="">Trinh Thám - Kiếm Hiệp</a></li>
-                                                <li><a href="">Truyện Cổ Tích - Ngụ Ngôn</a></li>
-                                                <li><a href="">Huyền Bí - Giả Tưởng - Kinh Dị</a></li>
-                                                <li><a href="">Phóng Sự - Ký Sự - Phê Bình Văn Học</a></li>
-                                                <li><a href="">Tác Giả - Tác Phẩm</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Thiếu Nhi</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">Truyện Thiếu Nhi</a></li>
-                                                <li><a href="">Bách Khoa Tri Thức</a></li>
-                                                <li><a href="">Manga - Comic</a></li>
-                                                <li><a href="">Kiến Thức - Kỹ Năng Sống</a></li>
-                                                <li><a href="">Tô Màu - Luyện Chữ - Dán Hình</a></li>
-                                                <li><a href="">Từ Điển Thiếu Nhi</a></li>
-                                                <li><a href="">Phát Triển Kỹ Năng - Trí Tuệ Cho Trẻ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Kinh Tế</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">QUẢN TRỊ - LÃNH ĐẠO</a></li>
-                                                <li><a href="">MARKETING - BÁN HÀNG</a></li>
-                                                <li><a href="">NHÂN VẬT - BÀI HỌC KINH DOANH</a></li>
-                                                <li><a href="">PHÂN TÍCH KINH TẾ</a></li>
-                                                <li><a href="">KHỞI NGHIỆP - LÀM GIÀU</a></li>
-                                                <li><a href="">CHỨNG KHOÁN - BẤT ĐỘNG SẢN - ĐẦU TƯ</a></li>
-                                                <li><a href="">NHÂN SỰ - VIỆC LÀM</a></li>
-                                                <li><a href="">TÀI CHÍNH - KẾ TOÁN - TIỀN TỆ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Tâm Lý - Kỹ Năng Sống</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">KỸ NĂNG SỐNG</a></li>
-                                                <li><a href="">TÂM LÝ</a></li>
-                                                <li><a href="">RÈN LUYỆN NHÂN CÁCH</a></li>
-                                                <li><a href="">SÁCH CHO TUỔI MỚI LỚN</a></li>
-                                                <li><a href="">HƯỚNG NGHIỆP & PHÁT TRIỂN BẢN THÂN</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Nuôi Dạy Con</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">DÀNH CHO MẸ BẦU</a></li>
-                                                <li><a href="">CẨM NANG LÀM CHA MẸ</a></li>
-                                                <li><a href="">DINH DƯỠNG - SỨC KHỎE CHO TRẺ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Tiểu Sử - Hồi Ký</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">CÂU CHUYỆN CUỘC ĐỜI</a></li>
-                                                <li><a href="">NGHỆ THUẬT - GIẢI TRÍ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Giáo Khoa - Giáo Trình - Tham Khảo</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">SÁCH GIÁO KHOA - SÁCH THAM KHẢO DÀNH CHO HỌC SINH TIỂU HỌC -
-                                                        CẤP 1</a></li>
-                                                <li><a href="">SÁCH GIÁO KHOA - SÁCH THAM KHẢO DÀNH CHO HỌC SINH THCS - CẤP
-                                                        2</a></li>
-                                                <li><a href="">GIÁO TRÌNH ĐẠI HỌC - CAO ĐẲNG</a></li>
-                                                <li><a href="">SÁCH GIÁO KHOA - SÁCH THAM KHẢO DÀNH CHO HỌC SINH THPT - CẤP
-                                                        3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Sách Học Ngoại Ngữ</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">TIẾNG ANH</a></li>
-                                                <li><a href="">TIẾNG NHẬT</a></li>
-                                                <li><a href="">TIẾNG ĐỨC</a></li>
-                                                <li><a href="">TIẾNG NGA</a></li>
-                                                <li><a href="">TIẾNG HÀN</a></li>
-                                                <li><a href="">TIẾNG TRUNG</a></li>
-                                                <li><a href="">TIẾNG PHÁP</a></li>
-                                                <li><a href="">NGÔN NGỮ KHÁC</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Lịch Sử - Địa Lý</a></li>
-                                        <li><a href="">Khoa Học Kỹ Thuật</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">KIẾN THỨC KHOA HỌC - TỰ NHIÊN</a></li>
-                                                <li><a href="">BÁCH KHOA -TRI THỨC</a></li>
-                                                <li><a href="">CÔNG NGHỆ THÔNG TIN</a></li>
-                                                <li><a href="">Y HỌC</a></li>
-                                                <li><a href="">TOÁN HỌC</a></li>
-                                                <li><a href="">KHOA HỌC KHÁC</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Ẩm Thực - Nữ Công Gia Chánh</a></li>
-                                        <li><a href="">Chính Trị - Pháp Lý - Triết Học</a></li>
-                                        <li><a href="">Văn Hóa - Nghệ Thuật - Du Lịch</a></li>
-                                        <li><a href="">Từ Điển</a></li>
-                                        <li><a href="">Âm Nhạc - Mỹ Thuật - Thời Trang</a></li>
-                                        <li><a href="">Thể Dục Thể Thao - Giải Trí</a></li>
-                                        <li><a href="">Báo - Tạp Chí</a></li>
-                                        <li><a href="">Làm Vườn - Thú Nuôi</a></li>
-                                        <li><a href="">Tôn Giáo - Tâm Linh</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="">PHẬT GIÁO</a></li>
-                                                <li><a href="">THIÊN CHÚA GIÁO</a></li>
-                                                <li><a href="">TÔN GIÁO HỌC</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="">Phong Thủy - Kinh Dịch - Chiêm Tinh</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Sách Giới Hạn</a></li>
-                                <li><a href="">Sách Ngoại Văn</a></li>
-                                <li><a href="">Văn Phòng Phẩm</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Bút - Viết</a></li>
-                                        <li><a href="">Dụng Cụ Học Sinh</a></li>
-                                        <li><a href="">Sản Phẩm Về Giấy</a></li>
-                                        <li><a href="">Dụng Cụ Văn Phòng</a></li>
-                                        <li><a href="">Dụng Cụ Vẽ</a></li>
-                                        <li><a href="">Sản Phẩm Điện Tử</a></li>
-                                        <li><a href="">Văn Phòng Phẩm Khác</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Đồ Chơi</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Xếp Hình - Lắp Ghép</a></li>
-                                        <li><a href="">Ôtô - Tàu - Thuyền - Máy Bay</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Đồ Trang Trí - Lưu Niệm</a></li>
-                                <li><a href="">Gợi Ý Quà Tặng</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="Ho_Tro">
-                    <b><a><img src="HinhAnh/phone-68-24.png" style="margin-right: 5px;">Hotline: 1900 6401</a></b>
-                    <span style="color: white;">|</span>
-                    <b><a href="#" id="Ho_Tro_Truc_Tuyen"><img src="HinhAnh/speech-bubble-24.png"
-                                style="margin-right: 5px;">Hỗ trợ trực tuyến</a></b>
+                <ul id="main-menu">
+                    <li>
+                        <img src="HinhAnh/icons8-list-50.png"
+                            style="width: 30px; height: 30px;margin-top: 7px;float: left;">
+                        <a href="#" style="color: #f3f3f3;width: 150px; margin-left: 60px;">Danh Mục Sách</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Sách Tiếng Việt</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Văn Học</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">Tác Phẩm Kinh Điển</a></li>
+                                            <li><a href="">Tiểu Thuyết</a></li>
+                                            <li><a href="">Truyện Ngắn - Tản Văn - Tạp Văn</a></li>
+                                            <li><a href="">Light Novel</a></li>
+                                            <li><a href="">Ngôn Tình</a></li>
+                                            <li><a href="">Du Ký</a></li>
+                                            <li><a href="">Thơ Ca - Ca Dao - Thành Ngữ - Tục Ngữ</a></li>
+                                            <li><a href="">Trinh Thám - Kiếm Hiệp</a></li>
+                                            <li><a href="">Truyện Cổ Tích - Ngụ Ngôn</a></li>
+                                            <li><a href="">Huyền Bí - Giả Tưởng - Kinh Dị</a></li>
+                                            <li><a href="">Phóng Sự - Ký Sự - Phê Bình Văn Học</a></li>
+                                            <li><a href="">Tác Giả - Tác Phẩm</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Thiếu Nhi</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">Truyện Thiếu Nhi</a></li>
+                                            <li><a href="">Bách Khoa Tri Thức</a></li>
+                                            <li><a href="">Manga - Comic</a></li>
+                                            <li><a href="">Kiến Thức - Kỹ Năng Sống</a></li>
+                                            <li><a href="">Tô Màu - Luyện Chữ - Dán Hình</a></li>
+                                            <li><a href="">Từ Điển Thiếu Nhi</a></li>
+                                            <li><a href="">Phát Triển Kỹ Năng - Trí Tuệ Cho Trẻ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Kinh Tế</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">QUẢN TRỊ - LÃNH ĐẠO</a></li>
+                                            <li><a href="">MARKETING - BÁN HÀNG</a></li>
+                                            <li><a href="">NHÂN VẬT - BÀI HỌC KINH DOANH</a></li>
+                                            <li><a href="">PHÂN TÍCH KINH TẾ</a></li>
+                                            <li><a href="">KHỞI NGHIỆP - LÀM GIÀU</a></li>
+                                            <li><a href="">CHỨNG KHOÁN - BẤT ĐỘNG SẢN - ĐẦU TƯ</a></li>
+                                            <li><a href="">NHÂN SỰ - VIỆC LÀM</a></li>
+                                            <li><a href="">TÀI CHÍNH - KẾ TOÁN - TIỀN TỆ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Tâm Lý - Kỹ Năng Sống</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">KỸ NĂNG SỐNG</a></li>
+                                            <li><a href="">TÂM LÝ</a></li>
+                                            <li><a href="">RÈN LUYỆN NHÂN CÁCH</a></li>
+                                            <li><a href="">SÁCH CHO TUỔI MỚI LỚN</a></li>
+                                            <li><a href="">HƯỚNG NGHIỆP & PHÁT TRIỂN BẢN THÂN</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Nuôi Dạy Con</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">DÀNH CHO MẸ BẦU</a></li>
+                                            <li><a href="">CẨM NANG LÀM CHA MẸ</a></li>
+                                            <li><a href="">DINH DƯỠNG - SỨC KHỎE CHO TRẺ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Tiểu Sử - Hồi Ký</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">CÂU CHUYỆN CUỘC ĐỜI</a></li>
+                                            <li><a href="">NGHỆ THUẬT - GIẢI TRÍ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Giáo Khoa - Giáo Trình - Tham Khảo</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">SÁCH GIÁO KHOA - SÁCH THAM KHẢO DÀNH CHO HỌC SINH TIỂU HỌC -
+                                                    CẤP 1</a></li>
+                                            <li><a href="">SÁCH GIÁO KHOA - SÁCH THAM KHẢO DÀNH CHO HỌC SINH THCS - CẤP
+                                                    2</a></li>
+                                            <li><a href="">GIÁO TRÌNH ĐẠI HỌC - CAO ĐẲNG</a></li>
+                                            <li><a href="">SÁCH GIÁO KHOA - SÁCH THAM KHẢO DÀNH CHO HỌC SINH THPT - CẤP
+                                                    3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Sách Học Ngoại Ngữ</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">TIẾNG ANH</a></li>
+                                            <li><a href="">TIẾNG NHẬT</a></li>
+                                            <li><a href="">TIẾNG ĐỨC</a></li>
+                                            <li><a href="">TIẾNG NGA</a></li>
+                                            <li><a href="">TIẾNG HÀN</a></li>
+                                            <li><a href="">TIẾNG TRUNG</a></li>
+                                            <li><a href="">TIẾNG PHÁP</a></li>
+                                            <li><a href="">NGÔN NGỮ KHÁC</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Lịch Sử - Địa Lý</a></li>
+                                    <li><a href="">Khoa Học Kỹ Thuật</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">KIẾN THỨC KHOA HỌC - TỰ NHIÊN</a></li>
+                                            <li><a href="">BÁCH KHOA -TRI THỨC</a></li>
+                                            <li><a href="">CÔNG NGHỆ THÔNG TIN</a></li>
+                                            <li><a href="">Y HỌC</a></li>
+                                            <li><a href="">TOÁN HỌC</a></li>
+                                            <li><a href="">KHOA HỌC KHÁC</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Ẩm Thực - Nữ Công Gia Chánh</a></li>
+                                    <li><a href="">Chính Trị - Pháp Lý - Triết Học</a></li>
+                                    <li><a href="">Văn Hóa - Nghệ Thuật - Du Lịch</a></li>
+                                    <li><a href="">Từ Điển</a></li>
+                                    <li><a href="">Âm Nhạc - Mỹ Thuật - Thời Trang</a></li>
+                                    <li><a href="">Thể Dục Thể Thao - Giải Trí</a></li>
+                                    <li><a href="">Báo - Tạp Chí</a></li>
+                                    <li><a href="">Làm Vườn - Thú Nuôi</a></li>
+                                    <li><a href="">Tôn Giáo - Tâm Linh</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">PHẬT GIÁO</a></li>
+                                            <li><a href="">THIÊN CHÚA GIÁO</a></li>
+                                            <li><a href="">TÔN GIÁO HỌC</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Phong Thủy - Kinh Dịch - Chiêm Tinh</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Sách Giới Hạn</a></li>
+                            <li><a href="">Sách Ngoại Văn</a></li>
+                            <li><a href="">Văn Phòng Phẩm</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Bút - Viết</a></li>
+                                    <li><a href="">Dụng Cụ Học Sinh</a></li>
+                                    <li><a href="">Sản Phẩm Về Giấy</a></li>
+                                    <li><a href="">Dụng Cụ Văn Phòng</a></li>
+                                    <li><a href="">Dụng Cụ Vẽ</a></li>
+                                    <li><a href="">Sản Phẩm Điện Tử</a></li>
+                                    <li><a href="">Văn Phòng Phẩm Khác</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Đồ Chơi</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Xếp Hình - Lắp Ghép</a></li>
+                                    <li><a href="">Ôtô - Tàu - Thuyền - Máy Bay</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Đồ Trang Trí - Lưu Niệm</a></li>
+                            <li><a href="">Gợi Ý Quà Tặng</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="Ho_Tro">
+                <b><a><img src="HinhAnh/phone-68-24.png" style="margin-right: 5px;">Hotline: 1900 6401</a></b>
+                <span style="color: white;">|</span>
+                <b><a href="#" id="Ho_Tro_Truc_Tuyen"><img src="HinhAnh/speech-bubble-24.png"
+                            style="margin-right: 5px;">Hỗ trợ trực tuyến</a></b>
+            </div>
+        </div>
+    
+        <div id="tygh_content">
+            <div id="breadcrumbs">
+                <span>
+                    <a href="TrangChu.html">Trang chủ</a> > <a href="#">Sách Chuyên Ngành</a> > <a href="#">Lịch sử, địa
+                        lý</a> >
+                </span><br>
+                <span>___________________________________________________________________________
+                    ______________________________________________________________________________________</span>
+            </div>
+            <div id="products_main_info">
+                <div id="image_wrap">
+                    <img src="HinhAnh/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg">
+                </div>
+                <div id="product_info">
+                    <h1 id="mainbox_title">
+                        Sapiens - Lược Sử Loài Người Bằng Tranh - Tập 2: Những Trụ Cột Của Nền Văn Minh
+                    </h1>
+                    <div id="product_share_rating_box">
+                        <div id="product_author_share">
+                            <span>Tác giả: <a href="#">Yuval Noah Harari</a></span><br>
+                            <span>Nhà xuất bản: NXB Dân Trí</span><br>
+                            <span>Nhà phát hành: <a href="#">Alpha books</a></span>
+                        </div>
+                    </div>
+                    <div id="mainbox2_body">
+                        <span>TẬP 2 của loạt truyện tranh chuyển thể từ tác phẩm "Sapiens - Lược sử loài người" của
+                            tác giả Yuval Noah Harari được chính thức phát hành trên toàn cầu.
+                        </span><br>
+                        <a href="#">Xem thêm</a><br>
+                        <span>___________________________________________________________</span>
+                    </div>
+                    <div id="sub_title">
+                        <span>Thông tin kèm theo</span><br>
+                        <img src="HinhAnh/dot_check.png" style="margin-right: 10px;margin-top: 10px;">
+                        <li style="margin-top: 10px;">Miễn phí giao hàng toàn quốc cho Đơn hàng từ 250.000đ (Áp dụng từ
+                            1/2/2015).</li>
+                        <a href="#" style="margin-left: 26px;">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div id="product_info_right">
+                    <div id="buy_title">
+                        <span>Thông tin thanh toán</span><br>
+                        <span>__________________________________</span>
+                    </div>
+                    <div id="prices_container">
+                        <span
+                            style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Giá
+                            bìa</span>
+                        <span
+                            style="min-width: 62px;height:23px;color:#353535;font-size:15px;line-height:23.07px;margin:0px 0px 8px 3px;text-align:left;margin-left: 130px;"><strike>345.000đ</strike></span>
+                        <span
+                            style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Giá
+                            bán</span>
+                        <span
+                            style="min-width: 83px;height: 24px;color:#ca2027;font-size:20px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 105px;">293.000đ</span>
+                        <span
+                            style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Tiết
+                            kiệm</span>
+                        <span
+                            style="min-width: 53px;height: 24px;color:#087b39;font-size:15px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 89px;">52.000đ(15%)</span>
+                        <span>Chất lượng sách</span>
+                        <span
+                            style="min-width: 23px;height: 24px;color:#087b39;font-size:12px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 95px;">Loại
+                            A (?)</span>
+                        <span>__________________________________</span>
+                    </div>
+                    <div id="product_amount">
+                        <img src="HinhAnh/dot_check.png">
+                        <li>SẮP HẾT HÀNG</li>
+                        <span style="margin-left: 130px;">Chỉ còn 4 sản phẩm</span>
+                        <span style="margin-left: 26px;">Miễn phí giao hàng cho sản phẩm này</span>
+                    </div>
+                    <div id="div_btn_buy">
+                        <img src="HinhAnh/icon_cart_1_2x.png">
+                        <input type="button" style="border: none;" id="btnbuy" name="fname" value="MUA NGAY">
+                    </div>
+
                 </div>
             </div>
-            <div id="tygh_content">
-                <div id="breadcrumbs">
-                    <span><a href="TrangChu.html">Trang chủ</a> > <a href="#">Sách Chuyên Ngành</a> > <a href="#">Lịch sử, địa lý</a> ></span>
+            <div id="mainbox2_container">
+                <span id="Sach_Nen_Mua_Kem">Sách nên mua kèm với sách này</span><br>
+                <span
+                    style="color:#9b9b9b;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+                <div id="mainbox2_body1">
+                    <img src="HinhAnh/373224_nam-ky-va-cu-dan-cac-tinh-mien-tay.jpg"
+                        style="width: 50px; height: 73px;margin-top: 30px;">
+                    <span style="margin-top: 30px;">+</span>
+                    <img src="HinhAnh/372200_nam-ky-va-cu-dan-cac-tinh-mien-dong.jpg"
+                        style="width: 50px; height: 77px;margin-top: 30px;">
+                    <span style="margin-top: 30px;">+</span>
+                    <img src="HinhAnh/372082_sapiens-luoc-su-loai-nguoi.jpg"
+                        style="width: 50px; height: 50px;margin-top: 30px;">
+                    <div class="book_sale_off" style="margin-top: 90px;margin-left: 30px;">-15%</div>
+                    <div class="book_sale_off" style="margin-top: 90px;margin-left: 130px;">-15%</div>
+                    <div class="book_sale_off" style="margin-top: 60px;margin-left: 230px;">-15%</div>
+                    <div id="product_total_content">
+                        <span id="Tong_Gia_Ban"
+                            style="width: 118px;height: 22px;color:#595959;display:inline;font-family:Arial, Helvetica, sans-serif;font-size:18px;line-height:21.6px;text-align:left;">Tổng
+                            giá bán</span>
+                        <span id="price_total"
+                            style="width: 96px;height: 23px;color:#ca2027;display:inline;font-size:19px;font-weight:700;text-align:left;">762.000đ</span>
+                        <div id="div_btn_buy1" style="margin-left: 10px;">
+                            <img src="HinhAnh/icon_cart_1_2x.png">
+                            <input type="button" style="border: none;" id="btnbuy1" name="fname" value="MUA NGAY">
+                        </div>
+                    </div>
+                </div>
+                <div id="checkbox_product_recommend">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">Nam Kỳ Và Cư Dân Các Tỉnh Miền Tây</label><span id="sec1"
+                        class="select">254.000</span><span>đ</span><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2">Nam Kỳ Và Cư Dân Các Tỉnh Miền Đông</label><span id="sec2"
+                        class="select">254.000</span><span>đ</span><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3">Sapiens Lược Sử Loài Người</label><span id="sec3"
+                        class="select">254.000</span><span>đ</span><br>
+                </div>
+            </div>
+            <div id="mainbox3_container">
+                <span id="Gioi_Thieu_Sach">GIỚI THIỆU SÁCH</span>
+                <h3>Sapiens - Lược Sử Loài Người Bằng Tranh - Tập 2: Những Trụ Cột Của Nền Văn Minh</h3>
+                <div id="box_author">
+                    <div id="box_author_title">
+                        <span>Thông tin tác giả</span><br>
+                        <span>------------------------------------------------------------</span>
+                    </div>
+                    <div id="box_author_name">
+                        <a href="#">Yuval Noah Harari</a>
+                    </div>
+                    <li><a href="#">>>Vào trang riêng của tác giả</a></li>
+                    <li><a href="#">>>Xem tất cả các sách của tác giả</a></li>
+                </div>
+                <p>TẬP 2 của loạt truyện tranh chuyển thể từ tác phẩm "Sapiens - Lược sử loài người" của tác giả Yuval
+                    Noah Harari được chính thức phát hành trên toàn cầu.</p>
+                <p>Omega+ cũng vui mừng thông báo đến với các độc giả tại Việt Nam, phiên bản tiếng Việt của tập truyện
+                    này cũng sẽ được phát hành toàn quốc gần như ĐỒNG THỜI với các phiên bản khác trên thế giới vào
+                    tháng 11/2021. Tập 1 đã được chúng tôi xuất bản vào tháng 5/2021.</p>
+                <p>Harari đã hợp tác với các nghệ sĩ truyện tranh nổi tiếng David Vandermeulen (đồng sáng tác) và Daniel
+                    Casanave (họa sĩ minh họa), để tạo ra một loạt tập truyện đồ họa nhằm thu hút những độc giả không
+                    thường xuyên của mảng khoa học và lịch sử. Tập sách bao gồm nhiều hình ảnh minh họa đầy đủ màu sắc
+                    và văn bản dễ hiểu sẽ làm nội dung của tác phẩm trở nên hấp dẫn hơn dành cho độc giả mọi lứa tuổi.
+                    Dự kiến sẽ có 4 tập dựa trên 4 phần chính của tác phẩm gốc.</p>
+                <p>ĐẶC BIỆT CỦA TẬP 2: là bộ bookmark hình nhân vật bao gồm 4 nhân vật chính dẫn dắt xuyên suốt các tập
+                    truyện và 1 nhân vật đại diện cho tập 2. Đó là:</p>
+                <p>. Tác giả Yuval Noah Harari</p>
+                <p>. Giáo sư đáng kính Saraswati</p>
+                <p>. Tiến sĩ Hư cấu mang hình dánh siêu nhân</p>
+                <p>. Thám tử siêu ngầu Lopez</p>
+                <p>. Nhân vật hư cấu cây lúa mì</p>
+            </div>
+            <div id="mainbox4_container">
+                <h3>Thông tin chi tiết</h3>
+                <li>Tác giả: Yuval Noah Harari</li>
+                <li>Nhà xuất bản: NXB Dân Trí</li>
+                <li>Nhà phát hành: <a href="#">Alpha books</a></li>
+                <li>Mã Sản phẩm: 8935270703257</li>
+                <li>Khối lượng: 520.00 gam</li>
+                <li>Ngôn ngữ: Tiếng Việt</li>
+                <li>Định dạng: Bìa cứng</li>
+                <li>Kích thước: 27.5 x 20.5 cm</li>
+                <li>Ngày phát hành: 2021</li>
+                <li>Số trang: 256</li>
+            </div>
+            <div id="mainbox5_container">
+                <span id="Nhan_Xet">Nhận xét từ khách hàng</span>
+                <div id="box_total_rating">
+                    <div id="box_left">
+                        <div style="float: left;">
+                            <div id="title_box_left">
+                                <span>Đánh giá trung bình</span>
+                            </div>
+                            <div id="info_box_left">
+                                (0 - người đánh giá)
+                            </div>
+                            <span id="total_score">0.0</span>
+                        </div>
+
+                        <div id="info_start">
+                            <form action="">
+                                <input class="star star-5" id="star-5" type="radio" name="star" />
+                                <label class="star star-5" for="star-5"></label>
+                                <input class="star star-4" id="star-4" type="radio" name="star" />
+                                <label class="star star-4" for="star-4"></label>
+                                <input class="star star-3" id="star-3" type="radio" name="star" />
+                                <label class="star star-3" for="star-3"></label>
+                                <input class="star star-2" id="star-2" type="radio" name="star" />
+                                <label class="star star-2" for="star-2"></label>
+                                <input class="star star-1" id="star-1" type="radio" name="star" />
+                                <label class="star star-1" for="star-1"></label>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="box_right">
+                        <br><br>
+                        <span style="color:#333333;font-size:13px;line-height:15.6px;text-align:left;">Đăng nhập để gửi
+                            nhận xét của bạn</span><br>
+                        <input type="button" style="border: none;" id="btndangnhap" name="fname"
+                            value="Đăng nhập"><br><br>
+                        <span style="color:#66645c;font-size:13px;margin:0px 0px 0px 20px;padding:15px 0px 0px">Bạn chưa
+                            có tài khoản? Hãy <a href="#">Đăng ký</a></span>
+                    </div>
+
+                </div>
+                <div id="fb_comments">
+                    <span>Bình luận từ facebook ()</span>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div id="footer" style="padding-top: 1700px;">
+        <div id="tygh_footer">
+            <div id="news_letter">
+                <label>ĐĂNG KÝ NHẬN EMAIL
+                <span>Đăng ký nhận thông tin sách mới, sách bán</span></label>
+                <div id="input_group">
+                    <input type="text" id="Ten_Cua_Ban" name="Ten_Cua_Ban" placeholder="Tên của bạn">
+                    <input type="text" id="Email_Cua_Ban" name="Email_Cua_Ban" placeholder="Nhập email của bạn">
+                    <select id="Chon_The_Loai_Sach">
+                        <option value="0">Thể loại yêu thích</option>
+                        <option value="1">Tất cả</option>
+                        <option value="2">Sách Ngoại Văn</option>
+                        <option value="3">Sách Kinh Tế</option>
+                        <option value="4">Sách Văn Học Trong Nước</option>
+                        <option value="5">Sách Văn Học Nước Ngoài</option>
+                        <option value="6">Sách Thường Thức - Đời Sống</option>
+                        <option value="7">Sách Thiếu Nhi</option>
+                        <option value="8">Sách Phát Triển Bản thân</option>
+                        <option value="9">Sách Tin Học - Ngoại Ngữ</option>
+                        <option value="10">Sách Chuyên Ngành</option>
+                        <option value="11">Sách Giáo Khoa - Giáo Trình</option>
+                        <option value="12">Tạp Chí - Văn Phòng Phẩm</option>
+                    </select>
+                    <input type="button" id="Dang_Ky_Ngay" name="fname" value="ĐĂNG KÝ NGAY">
+                </div>
+            </div>
+            <div id="row_foot">
+                <div id="span5_footer">
+                    <div id="span4">
+                        <span>VỀ CÔNG TY</span><br>
+                        <a href="#">Giới thiệu công ty</a>
+                        <a href="#">Tuyển dụng</a>
+                        <a href="#">Góc báo chí</a>
+                        <a href="#">Chương trình đại lý</a>
+                        <a href="#">Chính sách bảo mật</a> 
+                        <a href="#">Chính sách đổi trả</a>
+                    </div>
+                    <div id="span4">
+                        <span>TRỢ GIÚP</span><br>
+                        <a href="#">Quy định sử dụng</a>
+                        <a href="#">Hướng dẫn mua hàng</a>
+                        <a href="#">Phương thức thanh toán</a>
+                        <a href="#">Phương thức vận chuyển</a>
+                        <a href="#">Các câu hỏi thường gặp</a> 
+                        <a href="#">Ứng dụng đọc ebook</a>
+                    </div>
+                    <div id="span4">
+                        <span style="width: 105px;">TIN TỨC SÁCH</span><br>
+                        <a href="#">Tin tức</a>
+                        <a href="#">Chân dung</a>
+                        <a href="#">Điểm sách</a>
+                        <a href="#">Phê bình</a>
+                    </div>
+                    <div id="Tai_Ung_Dung">
+                        <span>TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</span>
+                        <img src="HinhAnh/icon-appstore.png">
+                        <img src="HinhAnh/icon-googleplay.png" style="margin-left: 10px;">
+                    </div>
+                </div>
+                <div id="span7_footer">
+                    <div class="span8">
+                        <span>CHẤP NHẬN THANH TOÁN</span>
+                        <img src="HinhAnh/visa.jpg">
+                        <img src="HinhAnh/master_card.jpg">
+                        <img src="HinhAnh/jcb.jpg">
+                        <img src="HinhAnh/atm.jpg">
+                        <img src="HinhAnh/cod.jpg">
+                        <img src="HinhAnh/payoo.jpg">                       
+                        <span style="margin-top: 10px;">THANH TOÁN AN TOÀN</span>
+                        <img src="HinhAnh/verify_visa.jpg">
+                        <img src="HinhAnh/mastercard_securecode.jpg">
+                        <img src="HinhAnh/onepay.jpg">  
+                    </div>
+                    <div class="span8">
+                        <span>ĐỐI TÁC VẬN CHUYỂN</span>
+                        <img src="HinhAnh/logovnb.png">
+                        <img src="HinhAnh/vn-post.jpg">
+                        <img src="HinhAnh/dhl.jpg" style="width: 184px;height: 52px;"> 
+                    </div>
+                    <div class="span8">
+                        <span>ĐỐI TÁC BÁN HÀNG</span>
+                        <img src="HinhAnh/lazada.jpg">
+                        <img src="HinhAnh/shopee.jpg">
+                        <img src="HinhAnh/amazon.jpg"> 
+                    </div>
+                </div>
+            </div>
+            <div id="span12">
+                <span>THƯỜNG ĐƯỢC TÌM KIẾM</span>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">truyện dan brown</a>
+                    <a href="#">sách hay về gia đình</a>
+                    <a href="#">sách học tiếng trung</a>
+                    <a href="#">sách blockchain</a>
+                    <a href="#">sách khởi nghiệp</a>
+                    <a href="#">sách quản lý nhân sự</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách warren buffett</a>
+                    <a href="#">giáo trình tiếng anh trẻ em</a>
+                    <a href="#">tiểu thuyết tình yêu</a>
+                    <a href="#">sách du học</a>
+                    <a href="#">sách bán hàng</a>
+                    <a href="#">sách về quản trị kinh doanh</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách digital marketing</a>
+                    <a href="#">sách hay về kinh tế</a>
+                    <a href="#">sách y học</a>
+                    <a href="#">sách kỹ năng mềm</a>
+                    <a href="#">sách về đầu tư chứng khoán</a>
+                    <a href="#">sách tài chính</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">truyện mới của nguyễn nhật ánh</a>
+                    <a href="#">sách về đầu tư</a>
+                    <a href="#">tủ sách gia đình</a>
+                    <a href="#">sách làm giàu</a>
+                    <a href="#">sách dạy nấu ăn</a>
+                    <a href="#">sách hay cho thiếu nhi</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách cho con</a>
+                    <a href="#">sách doanh nhân</a>
+                    <a href="#">sách dạy kỹ năng giao tiếp</a>
+                    <a href="#">sách phong thủy cổ</a>
+                    <a href="#">sách tâm lý về tình yêu</a>
+                    <a href="#">sách tự học tiếng anh giao tiếp</a>
+                </div>
+            </div>
+            <div id="copyright">
+                <div id="row_fuild">
+                    <img src="HinhAnh/logo_so_cong_thuong.png" style="float: left;">
+                    <div id="span13">
+                        <p>CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MÊ KÔNG COM</p>
+                        <span>Địa chỉ: 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, Hồ Chí Minh</span><br>
+                        <span>MST: 0303615027 do Sở Kế Hoạch Và Đầu Tư Tp.HCM cấp ngày 10/03/2011</span><br>
+                        <span>Tel: 028.73008182 - Fax: 028.39733234 - Email: <a href="#">hotro@vinabook.com</a></span>
+                    </div>
+                    <div id="span20">
+                        <p>WEBSITE CÙNG HỆ THỐNG</p>
+                        <img src="HinhAnh/logo_hotdeal_2x.png" style="width: 152px;height: 22px;">
+                        <img src="HinhAnh/logo_yesgo_2x.png" style="width: 146px;height: 40px;">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
 
-    </body>
 </html>
