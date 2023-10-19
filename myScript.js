@@ -1,38 +1,100 @@
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+    $(".button_cart").click(function () {
+        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+        //alert(cartAmount);
+        if (cartAmount != null)
+            cartAmount += 1;
+        else
+            cartAmount = 1;
+        $("#cart").text("Giỏ hàng của bạn (" + cartAmount + ")");
+        sessionStorage.setItem("cartAmount", cartAmount);
+        var pImg = $(this).parent().parent().parent().parent().find(".item-photo").attr("src");
+        var pName = $(this).parent().parent().parent().parent().find(".product-name").text();
+        var pPrice = $(this).parent().parent().parent().parent().find(".new-price").text();
+        var product = {
+            "img": pImg,
+            "name": pName,
+            "price": pPrice
+        };
+
+        //alert(pImg +" "+pName+" "+pPrice);
+        var cart = sessionStorage.getItem("cart");
+        var cartProducts = "";
+        if (cart != null) {
+            cartProducts = cart + "," + JSON.stringify(product);
+        } else
+            cartProducts = JSON.stringify(product);
+        sessionStorage.setItem("cart", cartProducts);
+        //alert(cartProducts);					
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function plus(x) // X là một điều khiển
 {
-	a = parseInt(document.getElementById(x).value);
-	a +=1;
-	document.getElementById(x).value = a;
+    a = parseInt(document.getElementById(x).value);
+    a += 1;
+    document.getElementById(x).value = a;
 }
-function sub(x)
-{
-	a = parseInt(document.getElementById(x).value);
-	if(a > 1)
-		a-=1;
-	document.getElementById(x).value = a;
+function sub(x) {
+    a = parseInt(document.getElementById(x).value);
+    if (a > 1)
+        a -= 1;
+    document.getElementById(x).value = a;
 }
-var i= 1;
+var i = 1;
 var N = 2;
-function next()
-{
-	if(i<N)
-		i += 1;
-	else
-		i = 1;
-	document.getElementById("slide").setAttribute("src","images/"+i+".jpg");
+function next() {
+    if (i < N)
+        i += 1;
+    else
+        i = 1;
+    document.getElementById("slide").setAttribute("src", "images/" + i + ".jpg");
 }
-function back()
-{
-	if(i>1)
-		i -= 1;
-	else
-		i = N;
-	document.getElementById("slide").setAttribute("src","images/"+i+".jpg");
+function back() {
+    if (i > 1)
+        i -= 1;
+    else
+        i = N;
+    document.getElementById("slide").setAttribute("src", "images/" + i + ".jpg");
 }
 
-function autoplay()
-{
-	setInterval(next, 5000);
+function autoplay() {
+    setInterval(next, 5000);
 }
 
 

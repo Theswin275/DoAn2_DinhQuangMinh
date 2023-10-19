@@ -9,7 +9,7 @@
     <title>Sapiens - Lược Sử Loài Người</title>
     <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
     <link rel="stylesheet" type="text/css" href="TrangChiTietSanPham.css" />
-    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="TrangChiTietSanPham.js"></script>
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -18,6 +18,39 @@
         });
     </script>
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <script>
+        $(document).ready(function () {
+        $(".button_cart").click(function () {
+        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+        //alert(cartAmount);
+        if (cartAmount != null)
+            cartAmount += 1;
+        else
+            cartAmount = 1;
+        $("#cart").text("(" + cartAmount + ")");
+        sessionStorage.setItem("cartAmount", cartAmount);
+        var pImg = $(this).parent().parent().parent().find(".item-photo").attr("src");
+        var pName = $(this).parent().parent().parent().find(".product-name").text();
+        var pPrice = $(this).parent().parent().parent().find(".new-price").text();
+        var product = {
+            "img": pImg,
+            "name": pName,
+            "price": pPrice
+        };
+
+        //alert(pImg +" "+pName+" "+pPrice);
+        var cart = sessionStorage.getItem("cart");
+        var cartProducts = "";
+        if (cart != null) {
+            cartProducts = cart + "," + JSON.stringify(product);
+        } else
+            cartProducts = JSON.stringify(product);
+        sessionStorage.setItem("cart", cartProducts);
+        //alert(cartProducts);					
+            });
+
+        });
+    </script>
 </head>
 
 <body>
@@ -226,10 +259,10 @@
             </div>
             <div id="products_main_info">
                 <div id="image_wrap">
-                    <img src="HinhAnh/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg">
+                    <img class="item-photo" id="item-photo" src="HinhAnh/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg">
                 </div>
                 <div id="product_info">
-                    <h1 id="mainbox_title">
+                    <h1 id="mainbox_title" class="product-name">
                         Sapiens - Lược Sử Loài Người Bằng Tranh - Tập 2: Những Trụ Cột Của Nền Văn Minh
                     </h1>
                     <div id="product_share_rating_box">
@@ -269,7 +302,7 @@
                             style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Giá
                             bán</span>
                         <span
-                            style="min-width: 83px;height: 24px;color:#ca2027;font-size:20px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 105px;">293.000đ</span>
+                            style="min-width: 83px;height: 24px;color:#ca2027;font-size:20px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 105px;" id="new-price" class="new-price">293<a>000</a></span>
                         <span
                             style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Tiết
                             kiệm</span>
@@ -289,9 +322,10 @@
                     </div>
                     <div id="div_btn_buy">
                         <img src="HinhAnh/icon_cart_1_2x.png">
-                        <input type="button" style="border: none;" id="btnbuy" name="fname" value="MUA NGAY">
+                        <input type="button" style="border: none;" class="button_cart" id="btnbuy" name="fname" value="MUA NGAY" onclick="themvaogiohang('item-photo','mainbox_title','new-price','SoLuong')" >
+                        <a href="" style="opacity: 0;" id="SoLuong">1</a>
                     </div>
-
+              
                 </div>
             </div>
             <div id="mainbox2_container">

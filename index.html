@@ -9,7 +9,7 @@
     <title>Vinabook - hiệu sách online trực tuyến cho mọi người</title>
     <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="myScript.js" async></script>
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -17,6 +17,40 @@
             $('.sub-menu').parent('li').addClass('has-child')
         });
     </script>
+    <script>
+        $(document).ready(function () {
+        $(".button_cart").click(function () {
+        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+        //alert(cartAmount);
+        if (cartAmount != null)
+            cartAmount += 1;
+        else
+            cartAmount = 1;
+        $("#cart").text("(" + cartAmount + ")");
+        sessionStorage.setItem("cartAmount", cartAmount);
+        var pImg = $(this).parent().parent().parent().parent().find(".item-photo").attr("src");
+        var pName = $(this).parent().parent().parent().parent().find(".product-name").text();
+        var pPrice = $(this).parent().parent().parent().parent().find(".new-price").text();
+        var product = {
+            "img": pImg,
+            "name": pName,
+            "price": pPrice
+        };
+
+        //alert(pImg +" "+pName+" "+pPrice);
+        var cart = sessionStorage.getItem("cart");
+        var cartProducts = "";
+        if (cart != null) {
+            cartProducts = cart + "," + JSON.stringify(product);
+        } else
+            cartProducts = JSON.stringify(product);
+        sessionStorage.setItem("cart", cartProducts);
+        //alert(cartProducts);					
+    });
+
+});
+    </script>
+    
 </head>
 
 <body>
@@ -42,7 +76,7 @@
                 <input type="text" style="margin-top: 10px;" id="txtsearch" name="txtsearch"
                     placeholder="Tìm kiếm tựa sách, tác giả">
                 <input type="button" style="border: none;" id="btnsearch" name="fname" value="Tìm sách">
-                <a href="GioHang.html">
+                <a id="cart" href="GioHang.html">
                     <img src="HinhAnh/icons8-cart-64.png">
                 </a>
                 <div id="Dang_Nhap_Va_Dang_Ky">
@@ -426,12 +460,12 @@
             
             <div class="book_best_sale">
                 <div class="img_thumb">
-                    <img src="HinhAnh/374705_bach-khoa-toan-thu-content-dai-bieu-mau.jpg">
+                    <img class="item-photo" src="HinhAnh/374705_bach-khoa-toan-thu-content-dai-bieu-mau.jpg">
                 </div>
                 <div class="text_content_best_sale">
                     <div class="title_best_sale">
                         <div class="oject_best_sale">
-                            <a href="#">Bách Khoa Toàn Thư Content: Đại Biểu Mẫu</a>
+                            <a href="#" class="product-name">Bách Khoa Toàn Thư Content: Đại Biểu Mẫu</a>
                         </div>
                         <span>Nhiều tác giả</span>
                     </div>
@@ -455,7 +489,7 @@
                                 style="width: 69px; height: 17px;color: white; font-size: 15px;"><strike>1.200.000đ</strike></span>
                         </div>
                         <div class="box_price">
-                            <span style="width: 89px; height: 18px; color: white; font-size: 17px;">1.080.000đ</span>
+                            <span class="new-price" style="width: 89px; height: 18px; color: white; font-size: 17px;">1.080.000đ</span>
                         </div>
                         <div class="add_to_cart">
                             <input type="button" class="button_cart" name="fname" value="Mua ngay">
@@ -715,12 +749,12 @@
             
             <div class="book_best_sale" style="background-color: #0B6F3C;">
                 <div class="img_thumb">
-                    <img src="HinhAnh/376544_p97434mproductsf115.jpg" style="width: 210px; height: 210px;">
+                    <img src="HinhAnh/376544_p97434mproductsf115.jpg" class="item-photo" style="width: 210px; height: 210px;">
                 </div>
                 <div class="text_content_best_sale">
                     <div class="title_best_sale">
                         <div class="oject_best_sale">
-                            <a href="#">Tạp chí Forbes - Số 115 (Tháng 3/2023)</a>
+                            <a href="#" class="product-name">Tạp chí Forbes - Số 115 (Tháng 3/2023)</a>
                         </div>
                         <span>Nhiều tác giả</span>
                     </div>
@@ -744,7 +778,7 @@
 
                         </div>
                         <div class="box_old_price">
-                            <span style="width: 69px; height: 17px;color: white; font-size: 20px;">95.000đ</span>
+                            <span class="new-price" style="width: 69px; height: 17px;color: white; font-size: 20px;">95.000đ</span>
                         </div>
                         <div class="box_price">
 
@@ -1159,12 +1193,12 @@
             </div>
             <div class="book_best_sale" style="background-color: #CF1133;">
                 <div class="img_thumb">
-                    <img src="HinhAnh/368244_combo-lucky-luke-bo-4-tap-so-ngau-hien.jpg">
+                    <img class="item-photo" src="HinhAnh/368244_combo-lucky-luke-bo-4-tap-so-ngau-hien.jpg">
                 </div>
                 <div class="text_content_best_sale">
                     <div class="title_best_sale">
                         <div class="oject_best_sale">
-                            <a href="#">Combo Lucky Luke - Bộ 4 Tập (Số Ngẫu Nhiên)</a>
+                            <a href="#" class="product-name">Combo Lucky Luke - Bộ 4 Tập (Số Ngẫu Nhiên)</a>
                         </div>
                         <span>First News</span>
                     </div>
@@ -1191,7 +1225,7 @@
                                 style="width: 69px; height: 17px;color: white; font-size: 15px;"><strike>106.800đ</strike></span>
                         </div>
                         <div class="box_price">
-                            <span style="width: 89px; height: 18px; color: white; font-size: 17px;">74.760đ</span>
+                            <span class="new-price" style="width: 89px; height: 18px; color: white; font-size: 17px;">74.760đ</span>
                         </div>
                         <div class="add_to_cart">
                             <input type="button" class="button_cart" name="fname" value="Mua ngay">

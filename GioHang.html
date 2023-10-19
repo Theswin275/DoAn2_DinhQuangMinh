@@ -12,49 +12,84 @@
     <script type="text/javascript" src="myScript.js"></script>
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script>
-        $(document).ready(function(){
+        let amountElement = document.getElementById('amount');
+        let amount = amountElement.value;
+        //console.log(amountElement)
+        let render = (amount) => {
+            amountElement.value = amount
+        };
+        //Handle Plus
+        let handlePlus = () => {
+            amount++;
+            render(amount);
+        };
+        //Handle Minus
+        let handleMinus = () => {
+            if (amount > 1)
+                amount--;
+            render(amount);
+        };
+
+        amountElement.addEventListener('input', () => {
+            amount = amountElement.value;
+            amount = parseInt(amount);
+            amount = (isNaN(amount) || amount == 0) ? 1 : amount;
+        });
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
             var cart = sessionStorage.getItem("cart");
-            cartProducts = "["+cart+"]";
+            cartProducts = "[" + cart + "]";
             products = JSON.parse(cartProducts);
             var amount = products.length;
             //alert(amount);
             //$("#cart-amount").text("Giỏ hàng ("+amount+")");
-            
+
             var table = `
             <table cellpadding="0" cellspacing="0">
                     <tr>
-                        <th>SẢN PHẨM</th>
+                        <th style="width: 114px;height: 39px;color:#117c47;display:table-cell;font-weight:700;padding:10px 0px;text-align:left;text-transform:uppercase;">SẢN PHẨM</th>
                     </tr>
             `;
             // alert(table);
-            for(var i=0; i<amount; i++){
+            
+            for (var i = 0; i < amount; i++) {
                 var row = `
                     <tr>
-                        <td style="padding-left:10px">${i+1}</td>
-                        <td style="width: 150px;height:80px;"><img style="width: 80px;height:80px;margin-left:30px" src="${products[i].img}" ></td>
-                        <td style="width:600px;text-align:center">${products[i].name}</td>
-                        <td id="DonGia" style="width: 100px;height:80px; padding-left:20px">${products[i].price}</td>
-                        <td style="width: 200px;height:80px;padding-left:40px">
-                            <input class="btn-minus" type="button" value="-" onclick="sub('sl')" onclick="dec('sl','ThanhTien')" style="width:40px; height:30px"/>
-                            <input class="txt-amount" id="sl" type="text" value="1" style="width:40px; height:30px"/>
-                            <input class="btn-plus" type="button" value="+" onclick="plus('sl')" onclick="inc('sl','ThanhTien')" style="width:40px; height:30px"/>
+                        <td style="width: 57px;height:78px;color:#66645c;display:table-cell;font-size:13px;padding:10px 0px;text-align:left;"><img style="width: 45px;height:58px;color:#0066c0;display:inline;font-size:13px;text-align:left" src="${products[i].img}" ></td>
+                        <td style="width:517px;height:78px;color:#66645c;display:table-cell;font-size:13px;padding:10px 0px;text-align:left"><p>${products[i].name}</p>
+                            <div id="buy-amount">
+                                <button class="minus-btn" onclick="sub('amount')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                                    </svg>
+
+                                </button>
+                                <input type="text" name="amount" id="amount" value="1">
+                                <button class="plus-btn" onclick="plus('amount')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </button>
+                            </div>
+                            
                         </td>
-                        <td style="width: 150px;height:80px;padding-left:45px" id="ThanhTien">${products[i].price}</td>
-                        <td>
-                            <img src="images/delete.png" style="width:40px; height:40px" >
+                        <td style="width:144px;height:78px;color:#66645c;display:table-cell;font-size:13px;padding:10px 0px;text-align:right">
+                            <span style="width:144px;height:28px;color:#66645c;display:table-cell;font-size:13px;padding:6px 0px;text-align:right">${products[i].price}</span>
+                            <img src="HinhAnh/6861362.png" style="width:16px; height:20px" style="color:#d3d3d3;display:inline-block;font-size:20px;line-height:20px;text-align:right;" >
                         </td>
                     </tr>
                 `;
-                
+      
                 table += row;
             }
-            
+
             table += `</table>`;
-            
-            $("#box_list_cart").html(table); 		
-    
-    });
-    </script>
+
+            $("#box_list_cart").html(table);
+
+        });
+    </script> -->
 </head>
 
 <body>
@@ -67,7 +102,27 @@
         </div>
         <div id="row_fluid">
             <div id="box_list_cart">
-                
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th style="width: 97.5px;text-align: center;">Hình</th>
+                        <th style="width:200px;text-align: center;">Tên</th>
+                        <th style="width:97.5px;text-align: center;">Đơn giá</th>
+                        <th style="width:97.5px;text-align: center;">Số lượng</th>
+                        <th style="width:97.5px;text-align: center;">Thành tiền</th>
+                        <th style="width:60px;text-align: center;">Sửa</th>
+                        <th style="width:60px;text-align: center;float: right;">Xóa</th>
+                    </tr>
+                    <tbody id="chitietgiohang" style="width: 100%;height: auto;">
+                        
+                    </tbody>
+                </table>
+                <div id="ver" style="width: 200px;height: 39px; background-color: #57c15c;float: right;">
+                    <input type="button" value="Xóa tất cả" id="btnXoa" onclick="XoaTatCa()">
+                </div>
+                <div id="ver" style="width: 200px;height: 39px; background-color: #57c15c;float: right;margin-right: 10px;">
+                    <input type="button" value="Cập nhập" id="btnCapNhap" onclick="CapNhap('buy-amount1')">
+                </div>
             </div>
             <div id="span4">
                 <div id="title_tom_tat">
@@ -76,15 +131,16 @@
                 <div id="list_tom_tat_thanh_toan">
                     <div style="width: 318px; height: 22px;">
                         <span style="width: 191px; height: 22px;text-align: left; float: left;">Sản phẩm</span>
-                        <span style="width: 127px; height: 22px; text-align: right; float: right;">1</span>
+                        <span style="width: 127px; height: 22px; text-align: right; float: right;" id="tongSP">0</span>
                     </div>
                     <div style="width: 318px; height: 22px;">
                         <span style="width: 191px; height: 22px;text-align: left; float: left;">Phí vận chuyển</span>
                         <span style="width: 127px; height: 22px; text-align: right; float: right;">Miễn phí</span>
                     </div>
                     <div style="width: 318px; height: 22px;">
-                        <span style="width: 191px; height: 22px;text-align: left; float: left;font-weight: 700;">TẠM TÍNH</span>
-                        <span style="width: 127px; height: 22px; text-align: right; float: right; color:#117c47">1.080.000 đ</span>
+                        <span  style="width: 191px; height: 22px;text-align: left; float: left;font-weight: 700;">TẠM TÍNH</span>
+                        <span id="TamTinh"
+                            style="width: 127px; height: 22px; text-align: right; float: right; color:#117c47">1.080.000đ</span>
                     </div>
                     <br>
                     <div id="italic_right">
@@ -95,7 +151,7 @@
                             <span>TỔNG CỘNG</span>
                         </div>
                         <div id="label_tong_cong">
-                            <span style="margin-left: 90px;">1.080.000đ</span>
+                            <span id="TongCong" style="margin-left: 90px;">1.080.000đ</span>
                         </div id="labeL_not_number">
                     </div>
                 </div>
@@ -105,5 +161,27 @@
             <a id="bt_thanh_toan" href="#">THANH TOÁN</a>
             <a id="bt_quay_lai" href="#">QUAY LẠI</a>
         </div>
+        <div id="buy-amount1" style="opacity: 0;">
+            <button class="minus-btn" onclick="sub('amount')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+
+            </button>
+            <input type="text" name="amount" id="amount" value="1">
+            <button class="plus-btn" onclick="plus('amount')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+            </button>
+            <button type="button" onclick="SuaSoLuong('amount','buy-amount1')" >Chọn</button>
+            <button type="button" onclick="HuySua('buy-amount1')">Hủy</button>
+        </div>
     </div>
+    
+    <script src="TrangChiTietSanPham.js"></script>
+    <script>
+        showgiohang();
+    </script>
+    
 </body>
