@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Vinabook - hiệu sách online trực tuyến cho mọi người</title>
+    <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
+    <link rel="stylesheet" type="text/css" href="SachTheoDanhMuc.css" />
+    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Tìm tất cả các li có sub-menu và thêm vào nó class has-child
+            $('.sub-menu').parent('li').addClass('has-child')
+        });
+    </script>
+</head>
+<body>
+    <div id="Dau_Trang_Web">
+        <div id="container">
+            <a style="width: 108px;height: 14px; text-align: left;"><img src="HinhAnh/cargo-truck.png">Miễn phí giao
+                hàng</a>
+            <span style="text-align: left;">|</span>
+            <a style="width: 79px;height: 14px; text-align: left; margin-left: 10px;"><img src="HinhAnh/book.png">80.000
+                tựa sách</a>
+            <span style="text-align: left;">|</span>
+            <a style="width: 82px;height: 14px; text-align: left; margin-left: 10px;"><img
+                    src="HinhAnh/smartphone-call.png">Vinabook Reader</a>
+        </div>
+    </div>
+    <div id="top_panel">
+        <div id="row1">
+            <div id="logo">
+                <img src="HinhAnh/vnb_logo_2x.png">
+            </div>
+            <div id="Tim_Kiem">
+                <img src="HinhAnh/search.png">
+                <input type="text" style="margin-top: 10px;" id="txtsearch" name="txtsearch"
+                    placeholder="Tìm kiếm tựa sách, tác giả">
+                <input type="button" style="border: none;" id="btnsearch" name="fname" value="Tìm sách">
+                <a href="GioHang.html">
+                    <img src="HinhAnh/icons8-cart-64.png">
+                </a>
+                <div id="Dang_Nhap_Va_Dang_Ky">
+                    <a href="Login.html" style="width: 83px;height:13px;">Đăng nhập</a>
+                    <span style="text-align: right;padding-top: 17px;">|</span>
+                    <a href="SignIn.html" style="width: 65px;height:13px;">Đăng ký</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="header1">
+        <div id="header">
+            <nav class="container">
+                <!-- <a href="" id="logo_menu">
+                        <img src="HinhAnh/icons8-list-50.png" style="width: 30px; height: 30px;margin-top: 7px;">
+                    </a> -->
+                <ul id="main-menu">
+                    <li>
+                        <img src="HinhAnh/icons8-list-50.png"
+                            style="width: 30px; height: 30px;margin-top: 7px;float: left;">
+                        <a href="#" style="color: #f3f3f3;width: 150px; margin-left: 60px;">Danh Mục Sách</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="Ho_Tro">
+                <b><a><img src="HinhAnh/phone-68-24.png" style="margin-right: 5px;">Hotline: 1900 6401</a></b>
+                <span style="color: white;">|</span>
+                <b><a href="#" id="Ho_Tro_Truc_Tuyen"><img src="HinhAnh/speech-bubble-24.png"
+                            style="margin-right: 5px;">Hỗ trợ trực tuyến</a>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper_SachTheoDanhMuc">
+        <div id="span14">
+            <div id="breadcrumbs">
+                <span><a href="" style="text-decoration: none; color: #000;">Trang chủ</a></span>
+                <span>></span>
+                <span><a href="" style="text-decoration: none;color: #000;">Sách Kinh Tế</a></span>
+            </div>
+        </div>
+        <div id="row">
+            <div id="span3">
+                <li class="bold">
+                    <a>Kho Sách Giảm Giá</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Sách Bán Chạy</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Sách Mới Phát Hành</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Sách Sắp Phát Hành</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Combo Ưu Đãi</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="box-widget-title">
+                    <span>DANH MỤC</span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Marketing - Bán hàng (804)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Ngoại Thương (98)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Nhân Sự & Việc Làm (233)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Nhân Vật & Bài Học Kinh Doanh (173)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Phân Tích & Môi Trường Kinh Tế (579)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Quản Trị - Lãnh Đạo (1285)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Tài Chính & Tiền Tệ (273)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Tài Chính - Kế Toán (471)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Văn Bản Luật (93)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Đầu Tư & Chứng Khoán (240)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Khởi Nghiệp/Kỹ Năng Làm Việc (249)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="box-widget-title">
+                    <span>TÁC GIẢ SÁCH KINH TẾ</span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Nhiều Dịch Giả (233)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">(202)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Nhiều Tác Giả (88)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">(69)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Brian Tracy (65)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Robert T.Kiyosaki (51)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Napoleon Hill (49)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">John C. Maxwell (44)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Harvard Business Review Press (42)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Trần Thị Bích Nga (38)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Thanh Huyền (36)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Minh Đức (34)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Bộ Tài Chính (31)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Phạm Ngọc Sáu (29)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Philip Kotler (29)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Alpha Books Biên Soạn (28)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Trần Thị Ngân Tuyến (26)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Vương Bảo Long (25)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Sharon L. Lechter (24)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Ken Blanchard (24)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="last">
+                    <a class="read_more_last" href="#">>>Xem Tất Cả</a>
+                </li>
+                <li class="box-widget-title">
+                    <span>NHÀ PHÁT HÀNH SÁCH KINH TẾ</span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Alpha Books (1201)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Chưa Có (528)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">NXB Trẻ (514)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Trí Việt (405)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Kinh Tế (380)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Thái Hà (320)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Văn Lang (243)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Bookshop-Loc (196)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">KT Tuấn Minh (176)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Thăng Long (130)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Phương Nam (104)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">PandaBooks (100)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Saigon Books (89)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Nhân Văn (89)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">BachvietBooks (75)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Thành Nghĩa (75)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Nhã Nam (73)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">1980Books (71)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Sách Dân Trí (71)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a class="category_level_2">Minh Lâm (70)</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="last">
+                    <a class="read_more_last" href="#">>>Xem Tất Cả</a>
+                </li>
+            </div>
+            <div id="span9">
+                <div class="mainbox2_title">
+                    <span id="mainbox2_title_span">Sách Kinh Tế mới phát hành</span><br>
+                    <span>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+                </div>
+                <div id="mainbox2_body">
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/375914_phan-tich-chung-khoan-security-analysis.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Phân Tích Chứng Khoán (Security)</a>
+                        <span class="author">Benjamin Graham -</span>
+                        <span class="old_price"><strike>499.000đ</strike></span><br>
+                        <span class="price">424.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376560_khong-bao-gio-la-that-bai-tat-ca-la-thu-thach-bia-mem.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Không Bao Giờ Là Thất Bại! Tất Cả Là</a>
+                        <span class="author">Chung Ju Yung</span>
+                        <span class="old_price"><strike>208.000đ</strike></span><br>
+                        <span class="price">177.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376566_tri-tue-cam-xuc-trong-kinh-doanh.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">TRÍ TUỆ CẢM XÚC TRONG KINH</a>
+                        <span class="author">Colleen Stanley</span>
+                        <span class="old_price"><strike>168.000đ</strike></span><br>
+                        <span class="price">143.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376464_tai-tao-to-chuc-ban-day-du.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Tái Tạo Tổ Chức (Bản Đầy Đủ)</a>
+                        <span class="author">Frederic Laloux</span>
+                        <span class="old_price"><strike>350.000đ</strike></span><br>
+                        <span class="price">315.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376411_ngon-ngu-bi-mat-trong-kinh-doanh-tai-ban.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Ngôn Ngữ Bí Mật Trong Kinh</a>
+                        <span class="author">Kevin Hogan</span>
+                        <span class="old_price"><strike>125.000đ</strike></span><br>
+                        <span class="price">106.000đ</span>
+                    </div>
+                    <a id="read_all" href="#">Xem tất cả >></a>
+                </div>
+                <div class="mainbox2_title">
+                    <span id="mainbox2_title_span">Sách Kinh Tế</span><br>
+                    <span>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+                </div>
+                <div id="mainbox2_body">
+                    <div id="sort_container">
+                        <select id="option-sort">
+                            <option value="1" selected>Sắp xếp theo trạng thái sách</option>
+                            <option value="2">Mới nhất</option>
+                            <option value="3">A đến Z</option>
+                            <option value="4">Z đến A</option>
+                            <option value="5">Giá thấp đến cao</option>
+                            <option value="6">Giá cao đến thấp</option>
+                            <option value="7">Giảm giá thấp đến cao</option>
+                            <option value="8">Giảm giá cao đến thấp</option>
+                        </select>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376566_tri-tue-cam-xuc-trong-kinh-doanh.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">TRÍ TUỆ CẢM XÚC TRONG KINH</a>
+                        <span class="author">Colleen Stanley</span>
+                        <span class="old_price"><strike>168.000đ</strike></span><br>
+                        <span class="price">143.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376560_khong-bao-gio-la-that-bai-tat-ca-la-thu-thach-bia-mem.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Không Bao Giờ Là Thất Bại! Tất Cả Là</a>
+                        <span class="author">Chung Ju Yung</span>
+                        <span class="old_price"><strike>208.000đ</strike></span><br>
+                        <span class="price">177.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/376053_24-bai-hoc-song-con-de-dau-tu-thanh-cong-tren-thi-truong-chung-khoan-tai-ban.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">24 Bài Học Sống Còn Để Đầu Tư</a>
+                       
+                        <span class="old_price"><strike>119.000đ</strike></span><br>
+                        <span class="price">101.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/375873_quan-ly-tai-chinh-ca-nhan-cho-nguoi-tre.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Quản Lý Tài Chính Cá Nhân</a>
+                        <span class="author">Rachel Richards</span>
+                        <span class="old_price"><strike>149.000đ</strike></span><br>
+                        <span class="price">127.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/375868_anh-mat-xa-cuoc-doi-gan.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Ánh Mắt Xa, Cuộc Đời Gần</a>
+                        <span class="author">Trần Ánh Phương</span>
+                        <span class="old_price"><strike>150.000đ</strike></span><br>
+                        <span class="price">128.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/375704_cam-nang-cho-thu-linh-ban-hang-go-roi-quan-ly-xu-tri-nhan-vien-kho-nhan-va-toi.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Cẩm Nang Cho Thủ Lĩnh Bán</a>
+                        <span class="author">Suzanne M Paling</span>
+                        <span class="old_price"><strike>145.000đ</strike></span><br>
+                        <span class="price">123.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/375146_chien-tranh-tien-te-phan-v-phan-cuoi.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Chiến Tranh Tiền Tệ - Phần V (Phần)</a>
+                        <span class="author">Song Hong Bing</span>
+                        <span class="old_price"><strike>195.000đ</strike></span><br>
+                        <span class="price">166.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/374742_18-quy-luat-bat-bien-phat-trien-danh-tieng-thuong-hieu-tai-ban-2022.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">18 Quy Luật Bất Biến Phát Triển</a>
+                        <span class="author">Ronald J Alsop</span>
+                        <span class="old_price"><strike>138.000đ</strike></span><br>
+                        <span class="price">117.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/374705_bach-khoa-toan-thu-content-dai-bieu-mau.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Bách Khoa Toàn Thư Content: Đại</a>
+                        <span class="author">Nhiều tác giả</span>
+                        <span class="old_price"><strike>1.200.000đ</strike></span><br>
+                        <span class="price">1.080.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/374184_bi-quyet-lam-giau-cua-napoleon-hill-tai-ban-2022.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Bí Quyết Làm Giàu Của</a>
+                        <span class="author">Napoleon Hill</span>
+                        <span class="old_price"><strike>98.000đ</strike></span><br>
+                        <span class="price">83.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/374031_my-vision-tam-nhin-thay-doi-quoc-gia-tai-ban-2022.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">My Vision - Tầm Nhìn Thay Đổi</a>
+                        <span class="author">Mohammed bin</span>
+                        <span class="old_price"><strike>268.000đ</strike></span><br>
+                        <span class="price">228.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373990_nhung-bac-thay-doi-moi-76-bai-hoc-truyen-cam-hung-tu-cac-nha-doi-moi-vi-dai.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Những Bậc Thầy Đổi Mới - 76 Bài</a>
+                        <span class="author">Paul Sloane</span>
+                        <span class="old_price"><strike>158.000đ</strike></span><br>
+                        <span class="price">134.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373782_chuyen-gia-kinh-te-buoc-vao-nha-tho-va-nhung-noi-khong-ngo-khac-de-hieu-ve-rui.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Chuyên Gia Kinh Tế Bước Vào Nhà</a>
+                        <span class="author">Allison Schrager</span>
+                        <span class="old_price"><strike>175.000đ</strike></span><br>
+                        <span class="price">149.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373772_dhl-tu-khoi-nghiep-den-dai-nghiep-toan-cau.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">DHL - Từ Khởi Nghiệp Đến Đại</a>
+                        <span class="author">Po Chung</span>
+                        <span class="old_price"><strike>169.000đ</strike></span><br>
+                        <span class="price">144.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373684_han-quoc-quoc-gia-gay-sung-so.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Hàn Quốc - Quốc Gia Gây Sững Sờ</a>
+                        <span class="author">Daniel Tudor</span>
+                        <span class="old_price"><strike>225.000đ</strike></span><br>
+                        <span class="price">191.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373536_kham-pha-nganh-kinh-doanh-dich-vu.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Khám Phá Ngành Kinh Doanh Dịch</a>
+                        <span class="author">Leonard L Berry</span>
+                        <span class="old_price"><strike>199.000đ</strike></span><br>
+                        <span class="price">169.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373507_donald-trump-chien-luoc-dau-tu-bat-dong-san.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Donald Trump - Chiến Lược Đầu</a>
+                        <span class="author">George H Ross,</span>
+                        <span class="old_price"><strike>169.000đ</strike></span><br>
+                        <span class="price">144.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373448_21-pham-chat-vang-cua-nha-lanh-dao-tai-ban.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">21 Phẩm Chất Vàng Của Nhà</a>
+                        <span class="author">John C.Maxwell</span>
+                        <span class="old_price"><strike>119.000đ</strike></span><br>
+                        <span class="price">101.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373445_loi-song-thuc-dung-cua-trieu-phu.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Lối Sống "Thực Dụng" Của Triệu</a>
+                        <span class="author">Thomas J Stanley</span>
+                        <span class="old_price"><strike>249.000đ</strike></span><br>
+                        <span class="price">212.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/373315_cai-bat-tay-trieu-do-the-million-dollar-handshake.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Cái Bắt Tay Triệu Đô - The Million</a>
+                        <span class="author">Catherine Molloy</span>
+                        <span class="old_price"><strike>128.000đ</strike></span><br>
+                        <span class="price">109.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372806_phat-trien-ky-nang-lanh-dao.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Phát Triển Kỹ Năng Lãnh Đạo</a>
+                        <span class="author">John C.Maxwell</span>
+                        <span class="old_price"><strike>179.000đ</strike></span><br>
+                        <span class="price">152.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372794_kien-thuc-kinh-nghiem-ky-nang-trong-cho-vay-va-xu-ly-no.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Kiến Thức - Kinh Nghiệm - Kỹ</a>
+                        <span class="author">Nguyễn Tấn Lộc</span>
+                        <span class="old_price"><strike>139.000đ</strike></span><br>
+                        <span class="price">111.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372575_duong-den-tu-do.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Đường Đến Tự Do</a>
+                        <span class="author">Peter Mallouk,</span>
+                        <span class="old_price"><strike>228.000đ</strike></span><br>
+                        <span class="price">194.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372484_doi-nhom-tuyet-dinh.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Đội Nhóm Tuyệt Đỉnh</a>
+                        <span class="author">Robert</span>
+                        <span class="old_price"><strike>139.000đ</strike></span><br>
+                        <span class="price">118.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372076_tien-dau-voi-vang-dong-do-la-tieu-chuan-vang-chung-khoan-hoa-va-cau-chuyen-ki.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Tiền Đấu Với Vàng - Đồng Đô-</a>
+                        <span class="author">James Rickards</span>
+                        <span class="old_price"><strike>159.000đ</strike></span><br>
+                        <span class="price">135.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372071_tay-trang-doi-lay-binh-minh.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Tay Trắng Đổi Lấy Bình Minh</a>
+                        <span class="author">Minh Lady</span>
+                        <span class="old_price"><strike>250.000đ</strike></span><br>
+                        <span class="price">213.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372012_nhung-ga-khong-lo-va-bai-hoc-ti-do.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Những Gã Khổng Lồ Và Bài Học Tỉ</a>
+                        <span class="author">Paul B Carroll,</span>
+                        <span class="old_price"><strike>155.000đ</strike></span><br>
+                        <span class="price">132.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/372009_quan-tuoi-cuoi-la-noi-khach-den.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Quán Tươi Cười Là Nơi Khách Đến</a>
+                        <span class="author">Takasi Uno</span>
+                        <span class="old_price"><strike>118.000đ</strike></span><br>
+                        <span class="price">100.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/371719_nghe-thuat-duy-tri-phong-do.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Nghệ Thuật Duy Trì Phong Độ</a>
+                        <span class="author">Sebastiaan Kodden</span>
+                        <span class="old_price"><strike>118.000đ</strike></span><br>
+                        <span class="price">100.000đ</span>
+                    </div>
+                    <div class="compact_active">
+                        <div class="product_thumb">
+                            <span class="thumb_discount">-15%</span>
+                            <img src="HinhAnh/371583_chung-khoan-hay-dau-tu-nhu-mot-nha-nong.jpg">
+                        </div>
+                        <a href="#" class="product_title_mainbox2_body">Chứng Khoán - Hãy Đầu Tư Như</a>
+                        <span class="author">Park Young Ok</span>
+                        <span class="old_price"><strike>239.000đ</strike></span><br>
+                        <span class="price">203.000đ</span>
+                    </div>
+                </div>
+                <div id="pagination_bottom">
+                    <span>Trang 1/124</span>
+                    <a class="cm_history" style="background-color:#2ba40d;" href="#">1</a>
+                    <a class="cm_history" href="#">2</a>
+                    <a class="cm_history" href="#">3</a>
+                    <a class="cm_history" href="#">4</a>
+                    <a class="cm_history" href="#">5</a>
+                    <a class="cm_history" href="#">6</a>
+                    <a class="cm_history" href="#">7</a>
+                    <a class="cm_history" href="#">8</a>
+                    <a class="cm_history" href="#">></a>
+                    <a class="cm_history" href="#">2 - 16</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    
+    <div id="footer">
+        <div id="tygh_footer">
+            <div id="news_letter">
+                <label>ĐĂNG KÝ NHẬN EMAIL
+                <span>Đăng ký nhận thông tin sách mới, sách bán</span></label>
+                <div id="input_group">
+                    <input type="text" id="Ten_Cua_Ban" name="Ten_Cua_Ban" placeholder="Tên của bạn">
+                    <input type="text" id="Email_Cua_Ban" name="Email_Cua_Ban" placeholder="Nhập email của bạn">
+                    <select id="Chon_The_Loai_Sach">
+                        <option value="0">Thể loại yêu thích</option>
+                        <option value="1">Tất cả</option>
+                        <option value="2">Sách Ngoại Văn</option>
+                        <option value="3">Sách Kinh Tế</option>
+                        <option value="4">Sách Văn Học Trong Nước</option>
+                        <option value="5">Sách Văn Học Nước Ngoài</option>
+                        <option value="6">Sách Thường Thức - Đời Sống</option>
+                        <option value="7">Sách Thiếu Nhi</option>
+                        <option value="8">Sách Phát Triển Bản thân</option>
+                        <option value="9">Sách Tin Học - Ngoại Ngữ</option>
+                        <option value="10">Sách Chuyên Ngành</option>
+                        <option value="11">Sách Giáo Khoa - Giáo Trình</option>
+                        <option value="12">Tạp Chí - Văn Phòng Phẩm</option>
+                    </select>
+                    <input type="button" id="Dang_Ky_Ngay" name="fname" value="ĐĂNG KÝ NGAY">
+                </div>
+            </div>
+            <div id="row_foot">
+                <div id="span5_footer">
+                    <div id="span4">
+                        <span>VỀ CÔNG TY</span><br>
+                        <a href="#">Giới thiệu công ty</a>
+                        <a href="#">Tuyển dụng</a>
+                        <a href="#">Góc báo chí</a>
+                        <a href="#">Chương trình đại lý</a>
+                        <a href="#">Chính sách bảo mật</a> 
+                        <a href="#">Chính sách đổi trả</a>
+                    </div>
+                    <div id="span4">
+                        <span>TRỢ GIÚP</span><br>
+                        <a href="#">Quy định sử dụng</a>
+                        <a href="#">Hướng dẫn mua hàng</a>
+                        <a href="#">Phương thức thanh toán</a>
+                        <a href="#">Phương thức vận chuyển</a>
+                        <a href="#">Các câu hỏi thường gặp</a> 
+                        <a href="#">Ứng dụng đọc ebook</a>
+                    </div>
+                    <div id="span4">
+                        <span style="width: 105px;">TIN TỨC SÁCH</span><br>
+                        <a href="#">Tin tức</a>
+                        <a href="#">Chân dung</a>
+                        <a href="#">Điểm sách</a>
+                        <a href="#">Phê bình</a>
+                    </div>
+                    <div id="Tai_Ung_Dung">
+                        <span>TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</span>
+                        <img src="HinhAnh/icon-appstore.png">
+                        <img src="HinhAnh/icon-googleplay.png" style="margin-left: 10px;">
+                    </div>
+                </div>
+                <div id="span7_footer">
+                    <div class="span8">
+                        <span>CHẤP NHẬN THANH TOÁN</span>
+                        <img src="HinhAnh/visa.jpg">
+                        <img src="HinhAnh/master_card.jpg">
+                        <img src="HinhAnh/jcb.jpg">
+                        <img src="HinhAnh/atm.jpg">
+                        <img src="HinhAnh/cod.jpg">
+                        <img src="HinhAnh/payoo.jpg">                       
+                        <span style="margin-top: 10px;">THANH TOÁN AN TOÀN</span>
+                        <img src="HinhAnh/verify_visa.jpg">
+                        <img src="HinhAnh/mastercard_securecode.jpg">
+                        <img src="HinhAnh/onepay.jpg">  
+                    </div>
+                    <div class="span8">
+                        <span>ĐỐI TÁC VẬN CHUYỂN</span>
+                        <img src="HinhAnh/logovnb.png">
+                        <img src="HinhAnh/vn-post.jpg">
+                        <img src="HinhAnh/dhl.jpg" style="width: 184px;height: 52px;"> 
+                    </div>
+                    <div class="span8">
+                        <span>ĐỐI TÁC BÁN HÀNG</span>
+                        <img src="HinhAnh/lazada.jpg">
+                        <img src="HinhAnh/shopee.jpg">
+                        <img src="HinhAnh/amazon.jpg"> 
+                    </div>
+                </div>
+            </div>
+            <div id="span12">
+                <span>THƯỜNG ĐƯỢC TÌM KIẾM</span>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">truyện dan brown</a>
+                    <a href="#">sách hay về gia đình</a>
+                    <a href="#">sách học tiếng trung</a>
+                    <a href="#">sách blockchain</a>
+                    <a href="#">sách khởi nghiệp</a>
+                    <a href="#">sách quản lý nhân sự</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách warren buffett</a>
+                    <a href="#">giáo trình tiếng anh trẻ em</a>
+                    <a href="#">tiểu thuyết tình yêu</a>
+                    <a href="#">sách du học</a>
+                    <a href="#">sách bán hàng</a>
+                    <a href="#">sách về quản trị kinh doanh</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách digital marketing</a>
+                    <a href="#">sách hay về kinh tế</a>
+                    <a href="#">sách y học</a>
+                    <a href="#">sách kỹ năng mềm</a>
+                    <a href="#">sách về đầu tư chứng khoán</a>
+                    <a href="#">sách tài chính</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">truyện mới của nguyễn nhật ánh</a>
+                    <a href="#">sách về đầu tư</a>
+                    <a href="#">tủ sách gia đình</a>
+                    <a href="#">sách làm giàu</a>
+                    <a href="#">sách dạy nấu ăn</a>
+                    <a href="#">sách hay cho thiếu nhi</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách cho con</a>
+                    <a href="#">sách doanh nhân</a>
+                    <a href="#">sách dạy kỹ năng giao tiếp</a>
+                    <a href="#">sách phong thủy cổ</a>
+                    <a href="#">sách tâm lý về tình yêu</a>
+                    <a href="#">sách tự học tiếng anh giao tiếp</a>
+                </div>
+            </div>
+            <div id="copyright">
+                <div id="row_fuild">
+                    <img src="HinhAnh/logo_so_cong_thuong.png" style="float: left;">
+                    <div id="span13">
+                        <p>CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MÊ KÔNG COM</p>
+                        <span>Địa chỉ: 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, Hồ Chí Minh</span><br>
+                        <span>MST: 0303615027 do Sở Kế Hoạch Và Đầu Tư Tp.HCM cấp ngày 10/03/2011</span><br>
+                        <span>Tel: 028.73008182 - Fax: 028.39733234 - Email: <a href="#">hotro@vinabook.com</a></span>
+                    </div>
+                    <div id="span20">
+                        <p>WEBSITE CÙNG HỆ THỐNG</p>
+                        <img src="HinhAnh/logo_hotdeal_2x.png" style="width: 152px;height: 22px;">
+                        <img src="HinhAnh/logo_yesgo_2x.png" style="width: 146px;height: 40px;">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
