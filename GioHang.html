@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Vinabook - hiệu sách online trực tuyến cho mọi người</title>
+    <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
+    <link rel="stylesheet" type="text/css" href="GioHang.css" />
+    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cart = sessionStorage.getItem("cart");
+            cartProducts = "["+cart+"]";
+            products = JSON.parse(cartProducts);
+            var amount = products.length;
+            //alert(amount);
+            //$("#cart-amount").text("Giỏ hàng ("+amount+")");
+            
+            var table = `
+            <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th>SẢN PHẨM</th>
+                    </tr>
+            `;
+            // alert(table);
+            for(var i=0; i<amount; i++){
+                var row = `
+                    <tr>
+                        <td style="padding-left:10px">${i+1}</td>
+                        <td style="width: 150px;height:80px;"><img style="width: 80px;height:80px;margin-left:30px" src="${products[i].img}" ></td>
+                        <td style="width:600px;text-align:center">${products[i].name}</td>
+                        <td id="DonGia" style="width: 100px;height:80px; padding-left:20px">${products[i].price}</td>
+                        <td style="width: 200px;height:80px;padding-left:40px">
+                            <input class="btn-minus" type="button" value="-" onclick="sub('sl')" onclick="dec('sl','ThanhTien')" style="width:40px; height:30px"/>
+                            <input class="txt-amount" id="sl" type="text" value="1" style="width:40px; height:30px"/>
+                            <input class="btn-plus" type="button" value="+" onclick="plus('sl')" onclick="inc('sl','ThanhTien')" style="width:40px; height:30px"/>
+                        </td>
+                        <td style="width: 150px;height:80px;padding-left:45px" id="ThanhTien">${products[i].price}</td>
+                        <td>
+                            <img src="images/delete.png" style="width:40px; height:40px" >
+                        </td>
+                    </tr>
+                `;
+                
+                table += row;
+            }
+            
+            table += `</table>`;
+            
+            $("#box_list_cart").html(table); 		
+    
+    });
+    </script>
+</head>
+
+<body>
+    <div id="tygh_top_panel">
+        <img src="HinhAnh/vnb_logo_2x.png">
+    </div>
+    <div id="tygh_content">
+        <div id="title_cart">
+            <span>GIỎ HÀNG</span>
+        </div>
+        <div id="row_fluid">
+            <div id="box_list_cart">
+                
+            </div>
+            <div id="span4">
+                <div id="title_tom_tat">
+                    <span>TÓM TẮT ĐƠN HÀNG</span>
+                </div>
+                <div id="list_tom_tat_thanh_toan">
+                    <div style="width: 318px; height: 22px;">
+                        <span style="width: 191px; height: 22px;text-align: left; float: left;">Sản phẩm</span>
+                        <span style="width: 127px; height: 22px; text-align: right; float: right;">1</span>
+                    </div>
+                    <div style="width: 318px; height: 22px;">
+                        <span style="width: 191px; height: 22px;text-align: left; float: left;">Phí vận chuyển</span>
+                        <span style="width: 127px; height: 22px; text-align: right; float: right;">Miễn phí</span>
+                    </div>
+                    <div style="width: 318px; height: 22px;">
+                        <span style="width: 191px; height: 22px;text-align: left; float: left;font-weight: 700;">TẠM TÍNH</span>
+                        <span style="width: 127px; height: 22px; text-align: right; float: right; color:#117c47">1.080.000 đ</span>
+                    </div>
+                    <br>
+                    <div id="italic_right">
+                        <i>(Đã bao gồm Thuế VAT và Phí đóng gói cơ bản).</i>
+                    </div>
+                    <div id="box_tong_cong">
+                        <div id="label_tong_cong">
+                            <span>TỔNG CỘNG</span>
+                        </div>
+                        <div id="label_tong_cong">
+                            <span style="margin-left: 90px;">1.080.000đ</span>
+                        </div id="labeL_not_number">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box_bt_payment">
+            <a id="bt_thanh_toan" href="#">THANH TOÁN</a>
+            <a id="bt_quay_lai" href="#">QUAY LẠI</a>
+        </div>
+    </div>
+</body>
