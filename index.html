@@ -9,7 +9,7 @@
     <title>Vinabook - hiệu sách online trực tuyến cho mọi người</title>
     <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script type="text/javascript" src="myScript.js" async></script>
+    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -17,7 +17,7 @@
             $('.sub-menu').parent('li').addClass('has-child')
         });
     </script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
         $(".button_cart").click(function () {
         var cartAmount = Number(sessionStorage.getItem("cartAmount"));
@@ -49,7 +49,7 @@
     });
 
 });
-    </script>
+    </script> -->
     
 </head>
 
@@ -79,6 +79,9 @@
                 <a id="cart" href="GioHang.html">
                     <img src="HinhAnh/icons8-cart-64.png">
                 </a>
+                <div id="divSoGioHang" style="position: fixed;width: 25px;height: 25px;border-radius: 15px;text-align: center; margin-left: 700px;margin-top: -50px;">
+                    <h3 id="soGioHang1" style="color: rgb(74, 60, 60);margin-left: 8px;margin-top:3px;">0</h3>
+                </div>
                 <div id="Dang_Nhap_Va_Dang_Ky">
                     <a href="Login.html" style="width: 83px;height:13px;">Đăng nhập</a>
                     <span style="text-align: right;padding-top: 17px;">|</span>
@@ -460,12 +463,12 @@
             
             <div class="book_best_sale">
                 <div class="img_thumb">
-                    <img class="item-photo" src="HinhAnh/374705_bach-khoa-toan-thu-content-dai-bieu-mau.jpg">
+                    <img class="item-photo" id="item-photo" src="HinhAnh/374705_bach-khoa-toan-thu-content-dai-bieu-mau.jpg">
                 </div>
                 <div class="text_content_best_sale">
                     <div class="title_best_sale">
                         <div class="oject_best_sale">
-                            <a href="#" class="product-name">Bách Khoa Toàn Thư Content: Đại Biểu Mẫu</a>
+                            <a href="#" class="product-name" id="product-name">Bách Khoa Toàn Thư Content: Đại Biểu Mẫu</a>
                         </div>
                         <span>Nhiều tác giả</span>
                     </div>
@@ -489,11 +492,14 @@
                                 style="width: 69px; height: 17px;color: white; font-size: 15px;"><strike>1.200.000đ</strike></span>
                         </div>
                         <div class="box_price">
-                            <span class="new-price" style="width: 89px; height: 18px; color: white; font-size: 17px;">1.080.000đ</span>
+                            <span class="new-price" style="width: 89px; height: 18px; color: white; font-size: 17px;margin-top: -30px;">1.080.000đ</span>
+                            <span id="product_price" style="opacity: 0;">1080000</span>
                         </div>
                         <div class="add_to_cart">
-                            <input type="button" class="button_cart" name="fname" value="Mua ngay">
+                            
+                            <input type="button" class="button_cart" name="fname" onclick="themvaogiohangCH1('item-photo','product-name','product_price','soSP1')" value="Mua ngay">
                         </div>
+                        <a href="" style="opacity: 0;width: 1px;height: 1px;" id="soSP1">1</a>
                     </div>
                 </div>
             </div>
@@ -749,12 +755,12 @@
             
             <div class="book_best_sale" style="background-color: #0B6F3C;">
                 <div class="img_thumb">
-                    <img src="HinhAnh/376544_p97434mproductsf115.jpg" class="item-photo" style="width: 210px; height: 210px;">
+                    <img id="item-photo1" src="HinhAnh/376544_p97434mproductsf115.jpg" class="item-photo" style="width: 210px; height: 210px;">
                 </div>
                 <div class="text_content_best_sale">
                     <div class="title_best_sale">
                         <div class="oject_best_sale">
-                            <a href="#" class="product-name">Tạp chí Forbes - Số 115 (Tháng 3/2023)</a>
+                            <a id="product-name1" href="#" class="product-name">Tạp chí Forbes - Số 115 (Tháng 3/2023)</a>
                         </div>
                         <span>Nhiều tác giả</span>
                     </div>
@@ -779,13 +785,15 @@
                         </div>
                         <div class="box_old_price">
                             <span class="new-price" style="width: 69px; height: 17px;color: white; font-size: 20px;">95.000đ</span>
+                            <span id="product_price1" style="opacity: 0;">95000</span>
                         </div>
                         <div class="box_price">
 
                         </div>
                         <div class="add_to_cart">
-                            <input type="button" class="button_cart" name="fname" value="Mua ngay">
+                            <input type="button" class="button_cart" name="fname" onclick="themvaogiohangCH1('item-photo1','product-name1','product_price1','soSP2')" value="Mua ngay">
                         </div>
+                        <a href="" style="opacity: 0;width: 1px;height: 1px;" id="soSP2">1</a>
                     </div>
                 </div>
             </div>
@@ -1193,12 +1201,12 @@
             </div>
             <div class="book_best_sale" style="background-color: #CF1133;">
                 <div class="img_thumb">
-                    <img class="item-photo" src="HinhAnh/368244_combo-lucky-luke-bo-4-tap-so-ngau-hien.jpg">
+                    <img id="item-photo2" class="item-photo" src="HinhAnh/368244_combo-lucky-luke-bo-4-tap-so-ngau-hien.jpg">
                 </div>
                 <div class="text_content_best_sale">
                     <div class="title_best_sale">
                         <div class="oject_best_sale">
-                            <a href="#" class="product-name">Combo Lucky Luke - Bộ 4 Tập (Số Ngẫu Nhiên)</a>
+                            <a id="product-name2" href="#" class="product-name">Combo Lucky Luke - Bộ 4 Tập (Số Ngẫu Nhiên)</a>
                         </div>
                         <span>First News</span>
                     </div>
@@ -1226,10 +1234,12 @@
                         </div>
                         <div class="box_price">
                             <span class="new-price" style="width: 89px; height: 18px; color: white; font-size: 17px;">74.760đ</span>
+                            <span id="product_price2" style="opacity: 0;">74760</span>
                         </div>
                         <div class="add_to_cart">
-                            <input type="button" class="button_cart" name="fname" value="Mua ngay">
+                            <input type="button" class="button_cart" name="fname" onclick="themvaogiohangCH1('item-photo2','product-name2','product_price2','soSP3')" value="Mua ngay">
                         </div>
+                        <a href="" style="opacity: 0;width: 1px;height: 1px;" id="soSP3">1</a>
                     </div>
                 </div>
             </div>
@@ -2393,6 +2403,11 @@
             </div>
         </div>
     </div>
+    <script src="TrangChiTietSanPham.js">
+    </script>
+    <script>
+         NhanDuLieu();
+    </script>
 </body>
 
 </html>

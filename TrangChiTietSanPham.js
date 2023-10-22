@@ -19,29 +19,39 @@ function themvaogiohang(a,b,c,d) {
     
     var item = [hinh, ten, gia, soluong];
     
-    giohang.push(item);
-
+    
     if (giohang.length < 1){
         giohang.push(item);
         tongSL+=parseInt(item[3], 10);
-        console.log(parseInt(tongSL));
+        document.getElementById('soGioHang').innerHTML=tongSL;
     }
     else{
         for (let j = 0; j < giohang.length; j++) {
             if (item[1]==giohang[j][1]){
-                console.log(tongSL);
                 tongSL+=parseInt(item[3], 10);
                 giohang[j][3]=tongSL;
+                document.getElementById('soGioHang').innerHTML=tongSL;
             }
         }
     }
+    
+    sessionStorage.setItem("tongSL",JSON.stringify(tongSL));
 
     sessionStorage.setItem("giohang",JSON.stringify(giohang));
 }
 
+
 function showgiohang() {
     var gh = sessionStorage.getItem("giohang")
     var giohang = JSON.parse(gh);
+    //
+    var ok = sessionStorage.getItem("tongSL");
+    var oke = JSON.parse(ok);
+    sessionStorage.setItem("tongSLquayLai",JSON.stringify(oke));
+    
+    
+    var TongAll = 0;
+    console.log(TongAll);
     let ttgh="";
     let tong=0;
     for(let i=0; i< giohang.length; i++){
@@ -64,15 +74,36 @@ function showgiohang() {
         ttgh += "<td><input type='button' value='Xóa' style='width: 60px;height: 30px;' onclick='Xoa(this)'></td>";
         ttgh += "<tr>";
         
-        console.log(ttgh);
-        
-        document.getElementById('tongSP').innerText=Sl;
         togSL=parseInt(Sl,10);
         tongTien.push(tt);
         // tongTien.push(tt);
+        // TongAll+=parseInt(Sl);
+        
+        
+        document.getElementById('tongSP').innerText=j;
+        
     }
+    // console.log(TongAll);
+    
+    // document.getElementById('tongSP').innerText=TongAll;
     document.getElementById('chitietgiohang').innerHTML=ttgh;
     thanhTien();
+    console.log(giohang);
+    
+}
+
+function ChSoLuong(x) {
+    var bx = document.getElementById(x).innerHTML;
+    console.log(bx);
+    sessionStorage.setItem("guilaiSogiohang",JSON.stringify(bx));
+
+}
+
+function showSoGioHang(){ 
+    var okNha = sessionStorage.getItem("tongSLquayLai");
+    var MongLaDuoc = JSON.parse(okNha);
+    console.log(MongLaDuoc);
+    document.getElementById('soGioHang').innerHTML=MongLaDuoc;
 }
 
 //hoàn thiện
@@ -138,3 +169,18 @@ function CapNhap(x){
 function HuySua(x){
     document.getElementById(x).style.opacity = 0 ;
 }
+
+function NhanDuLieu() {
+    var gg = sessionStorage.getItem("guilaiSogiohang");
+    let DuLieuNhanVe = JSON.parse(gg);
+    console.log(DuLieuNhanVe);
+    document.getElementById('soGioHang1').innerHTML=DuLieuNhanVe;
+}
+
+
+
+
+
+
+
+

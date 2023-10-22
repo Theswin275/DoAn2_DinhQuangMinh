@@ -2,45 +2,37 @@
 
 
 
+// $(document).ready(function () {
+//     $(".button_cart").click(function () {
+//         var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+//         //alert(cartAmount);
+//         if (cartAmount != null)
+//             cartAmount += 1;
+//         else
+//             cartAmount = 1;
+//         $("#cart").text("Giỏ hàng của bạn (" + cartAmount + ")");
+//         sessionStorage.setItem("cartAmount", cartAmount);
+//         var pImg = $(this).parent().parent().parent().parent().find(".item-photo").attr("src");
+//         var pName = $(this).parent().parent().parent().parent().find(".product-name").text();
+//         var pPrice = $(this).parent().parent().parent().parent().find(".new-price").text();
+//         var product = {
+//             "img": pImg,
+//             "name": pName,
+//             "price": pPrice
+//         };
 
+//         //alert(pImg +" "+pName+" "+pPrice);
+//         var cart = sessionStorage.getItem("cart");
+//         var cartProducts = "";
+//         if (cart != null) {
+//             cartProducts = cart + "," + JSON.stringify(product);
+//         } else
+//             cartProducts = JSON.stringify(product);
+//         sessionStorage.setItem("cart", cartProducts);
+//         //alert(cartProducts);					
+//     });
 
-
-
-
-
-
-
-$(document).ready(function () {
-    $(".button_cart").click(function () {
-        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
-        //alert(cartAmount);
-        if (cartAmount != null)
-            cartAmount += 1;
-        else
-            cartAmount = 1;
-        $("#cart").text("Giỏ hàng của bạn (" + cartAmount + ")");
-        sessionStorage.setItem("cartAmount", cartAmount);
-        var pImg = $(this).parent().parent().parent().parent().find(".item-photo").attr("src");
-        var pName = $(this).parent().parent().parent().parent().find(".product-name").text();
-        var pPrice = $(this).parent().parent().parent().parent().find(".new-price").text();
-        var product = {
-            "img": pImg,
-            "name": pName,
-            "price": pPrice
-        };
-
-        //alert(pImg +" "+pName+" "+pPrice);
-        var cart = sessionStorage.getItem("cart");
-        var cartProducts = "";
-        if (cart != null) {
-            cartProducts = cart + "," + JSON.stringify(product);
-        } else
-            cartProducts = JSON.stringify(product);
-        sessionStorage.setItem("cart", cartProducts);
-        //alert(cartProducts);					
-    });
-
-});
+// });
 
 
 

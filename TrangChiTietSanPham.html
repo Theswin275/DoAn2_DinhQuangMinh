@@ -18,7 +18,7 @@
         });
     </script>
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
         $(".button_cart").click(function () {
         var cartAmount = Number(sessionStorage.getItem("cartAmount"));
@@ -50,7 +50,8 @@
             });
 
         });
-    </script>
+    </script> -->
+    
 </head>
 
 <body>
@@ -69,7 +70,7 @@
     <div id="top_panel">
         <div id="row1">
             <div id="logo">
-                <img src="HinhAnh/vnb_logo_2x.png">
+                <a href="index.html"><img src="HinhAnh/vnb_logo_2x.png"></a>
             </div>
             <div id="Tim_Kiem">
                 <img src="HinhAnh/search.png">
@@ -79,6 +80,9 @@
                 <a href="GioHang.html">
                     <img src="HinhAnh/icons8-cart-64.png">
                 </a>
+                <div id="divSoGioHang" style="position: fixed;width: 25px;height: 25px;border-radius: 15px;text-align: center; margin-left: 700px;margin-top: -50px;">
+                    <h3 id="soGioHang" style="color: rgb(74, 60, 60);margin-left: 8px;margin-top:3px;">0</h3>
+                </div>
                 <div id="Dang_Nhap_Va_Dang_Ky">
                     <a href="Login.html" style="width: 83px;height:13px;">Đăng nhập</a>
                     <span style="text-align: right;padding-top: 17px;">|</span>
@@ -247,7 +251,7 @@
                             style="margin-right: 5px;">Hỗ trợ trực tuyến</a></b>
             </div>
         </div>
-    
+
         <div id="tygh_content">
             <div id="breadcrumbs">
                 <span>
@@ -259,7 +263,8 @@
             </div>
             <div id="products_main_info">
                 <div id="image_wrap">
-                    <img class="item-photo" id="item-photo" src="HinhAnh/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg">
+                    <img class="item-photo" id="item-photo"
+                        src="HinhAnh/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg">
                 </div>
                 <div id="product_info">
                     <h1 id="mainbox_title" class="product-name">
@@ -302,7 +307,8 @@
                             style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Giá
                             bán</span>
                         <span
-                            style="min-width: 83px;height: 24px;color:#ca2027;font-size:20px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 105px;" id="new-price" class="new-price">293<a>000</a></span>
+                            style="min-width: 83px;height: 24px;color:#ca2027;font-size:20px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 105px;"
+                            id="new-price" class="new-price">293<a>000</a></span>
                         <span
                             style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Tiết
                             kiệm</span>
@@ -322,10 +328,12 @@
                     </div>
                     <div id="div_btn_buy">
                         <img src="HinhAnh/icon_cart_1_2x.png">
-                        <input type="button" style="border: none;" class="button_cart" id="btnbuy" name="fname" value="MUA NGAY" onclick="themvaogiohang('item-photo','mainbox_title','new-price','SoLuong')" >
+                        <input type="button" style="border: none;" class="button_cart" id="btnbuy" name="fname"
+                            value="MUA NGAY"
+                            onclick="themvaogiohang('item-photo','mainbox_title','new-price','SoLuong')">
                         <a href="" style="opacity: 0;" id="SoLuong">1</a>
                     </div>
-              
+
                 </div>
             </div>
             <div id="mainbox2_container">
@@ -357,13 +365,13 @@
                     </div>
                 </div>
                 <div id="checkbox_product_recommend">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <input type="checkbox" checked id="vehicle1" name="vehicle1" value="Bike">
                     <label for="vehicle1">Nam Kỳ Và Cư Dân Các Tỉnh Miền Tây</label><span id="sec1"
                         class="select">254.000</span><span>đ</span><br>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <input type="checkbox" checked id="vehicle2" name="vehicle2" value="Car">
                     <label for="vehicle2">Nam Kỳ Và Cư Dân Các Tỉnh Miền Đông</label><span id="sec2"
                         class="select">254.000</span><span>đ</span><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <input type="checkbox" checked id="vehicle3" name="vehicle3" value="Boat">
                     <label for="vehicle3">Sapiens Lược Sử Loài Người</label><span id="sec3"
                         class="select">254.000</span><span>đ</span><br>
                 </div>
@@ -459,12 +467,12 @@
             </div>
         </div>
     </div>
-    
+
     <div id="footer" style="padding-top: 1700px;">
         <div id="tygh_footer">
             <div id="news_letter">
                 <label>ĐĂNG KÝ NHẬN EMAIL
-                <span>Đăng ký nhận thông tin sách mới, sách bán</span></label>
+                    <span>Đăng ký nhận thông tin sách mới, sách bán</span></label>
                 <div id="input_group">
                     <input type="text" id="Ten_Cua_Ban" name="Ten_Cua_Ban" placeholder="Tên của bạn">
                     <input type="text" id="Email_Cua_Ban" name="Email_Cua_Ban" placeholder="Nhập email của bạn">
@@ -494,7 +502,7 @@
                         <a href="#">Tuyển dụng</a>
                         <a href="#">Góc báo chí</a>
                         <a href="#">Chương trình đại lý</a>
-                        <a href="#">Chính sách bảo mật</a> 
+                        <a href="#">Chính sách bảo mật</a>
                         <a href="#">Chính sách đổi trả</a>
                     </div>
                     <div id="span4">
@@ -503,7 +511,7 @@
                         <a href="#">Hướng dẫn mua hàng</a>
                         <a href="#">Phương thức thanh toán</a>
                         <a href="#">Phương thức vận chuyển</a>
-                        <a href="#">Các câu hỏi thường gặp</a> 
+                        <a href="#">Các câu hỏi thường gặp</a>
                         <a href="#">Ứng dụng đọc ebook</a>
                     </div>
                     <div id="span4">
@@ -527,23 +535,23 @@
                         <img src="HinhAnh/jcb.jpg">
                         <img src="HinhAnh/atm.jpg">
                         <img src="HinhAnh/cod.jpg">
-                        <img src="HinhAnh/payoo.jpg">                       
+                        <img src="HinhAnh/payoo.jpg">
                         <span style="margin-top: 10px;">THANH TOÁN AN TOÀN</span>
                         <img src="HinhAnh/verify_visa.jpg">
                         <img src="HinhAnh/mastercard_securecode.jpg">
-                        <img src="HinhAnh/onepay.jpg">  
+                        <img src="HinhAnh/onepay.jpg">
                     </div>
                     <div class="span8">
                         <span>ĐỐI TÁC VẬN CHUYỂN</span>
                         <img src="HinhAnh/logovnb.png">
                         <img src="HinhAnh/vn-post.jpg">
-                        <img src="HinhAnh/dhl.jpg" style="width: 184px;height: 52px;"> 
+                        <img src="HinhAnh/dhl.jpg" style="width: 184px;height: 52px;">
                     </div>
                     <div class="span8">
                         <span>ĐỐI TÁC BÁN HÀNG</span>
                         <img src="HinhAnh/lazada.jpg">
                         <img src="HinhAnh/shopee.jpg">
-                        <img src="HinhAnh/amazon.jpg"> 
+                        <img src="HinhAnh/amazon.jpg">
                     </div>
                 </div>
             </div>
@@ -605,10 +613,14 @@
                         <img src="HinhAnh/logo_yesgo_2x.png" style="width: 146px;height: 40px;">
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
+    <script src="TrangChiTietSanPham.js"></script>
+    <script>
+        showSoGioHang();
+    </script>
 </body>
 
 </html>
