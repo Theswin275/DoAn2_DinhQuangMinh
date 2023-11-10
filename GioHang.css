@@ -5,6 +5,8 @@ body {
     background-size: cover;
     position: relative;
     background-color: #F2F5F7;
+    overflow-y: hidden;
+
 }
 
 #content {

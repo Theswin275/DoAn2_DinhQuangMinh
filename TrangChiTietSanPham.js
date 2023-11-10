@@ -1,43 +1,43 @@
 var giohang = new Array();
 var tongTien = new Array();
 var stt = 0;
-var tongSL=0;
+var tongSL = 0;
 
-function themvaogiohang(a,b,c,d) {
+function themvaogiohang(a, b, c, d) {
     var bx = document.getElementById(a).parentElement.children;
-    var hinh=bx[0].src;
+    var hinh = bx[0].src;
 
     var by = document.getElementById(b).parentElement.children;
-    var ten=by[0].innerText;
+    var ten = by[0].innerText;
 
 
     var bz = document.getElementById(c).parentElement.children;
-    var gia=bz[3].innerText;
-    
+    var gia = bz[3].innerText;
+
     var bk = document.getElementById(d).parentElement.children;
-    var soluong= bk[2].innerText;
-    
+    var soluong = bk[2].innerText;
+
     var item = [hinh, ten, gia, soluong];
-    
-    
-    if (giohang.length < 1){
+
+
+    if (giohang.length < 1) {
         giohang.push(item);
-        tongSL+=parseInt(item[3], 10);
-        document.getElementById('soGioHang').innerHTML=tongSL;
+        tongSL += parseInt(item[3], 10);
+        document.getElementById('soGioHang').innerHTML = tongSL;
     }
-    else{
+    else {
         for (let j = 0; j < giohang.length; j++) {
-            if (item[1]==giohang[j][1]){
-                tongSL+=parseInt(item[3], 10);
-                giohang[j][3]=tongSL;
-                document.getElementById('soGioHang').innerHTML=tongSL;
+            if (item[1] == giohang[j][1]) {
+                tongSL += parseInt(item[3], 10);
+                giohang[j][3] = tongSL;
+                document.getElementById('soGioHang').innerHTML = tongSL;
             }
         }
     }
-    
-    sessionStorage.setItem("tongSL",JSON.stringify(tongSL));
 
-    sessionStorage.setItem("giohang",JSON.stringify(giohang));
+    sessionStorage.setItem("tongSL", JSON.stringify(tongSL));
+
+    sessionStorage.setItem("giohang", JSON.stringify(giohang));
 }
 
 
@@ -47,32 +47,46 @@ function showgiohang() {
     //
     var ok = sessionStorage.getItem("tongSL");
     var oke = JSON.parse(ok);
-    sessionStorage.setItem("tongSLquayLai",JSON.stringify(oke));
-    
-    
+    sessionStorage.setItem("tongSLquayLai", JSON.stringify(oke));
+
+
     var TongAll = 0;
     console.log(TongAll);
-    let ttgh="";
-    let tong=0;
-    for(let i=0; i< giohang.length; i++){
-        let tt= parseFloat(giohang[i][2])*parseInt(giohang[i][3]);
-        tong+=tt;
-        let j=i+1;
-        let hinhsp = "<img src='"+ giohang[i][0] +"' width='45px'>";
-        let tensp= giohang[i][1];
-        let dGia= giohang[i][2];
-        let Sl= giohang[i][3];
-        
+    let ttgh = "";
+    let tong = 0;
+    for (let i = 0; i < giohang.length; i++) {
+        let tt = parseFloat(giohang[i][2]) * parseInt(giohang[i][3]);
+        tong += tt;
+        let j = i + 1;
+        let hinhsp = "<img src='" + giohang[i][0] + "' width='45px'>";
+        let tensp = giohang[i][1];
+        let dGia = giohang[i][2];
+        let Sl = giohang[i][3];
+
+        // ttgh += "<tr>";
+        // ttgh += "<td style='text-align: center;'>" + j + "</td>";
+        // ttgh += "<td style='width: 45px;text-align: center;'>" + hinhsp + "</td>";
+        // ttgh += "<td>" + tensp + "</td>";
+        // ttgh += "<td style='text-align: center;'>" + dGia + "</td>";
+        // ttgh += "<td style='text-align: center;'>" + Sl + "</td>";
+        // ttgh += "<td style='text-align: center;'>" + tt + "</td>";
+        // ttgh += "<td></td>"
+        // // ttgh += "<td><input type='button' value='Sửa' style='width: 60px;height: 30px;' onclick='Sua(this)'></td>";
+        // ttgh += "<td><input type='button' value='Xóa' style='width: 60px;height: 30px;' onclick='Xoa(this)'></td>";
+        // ttgh += "<tr>";
+
         ttgh += "<tr>";
-        ttgh += "<td style='text-align: center;'>"+j+"</td>";
-        ttgh += "<td style='width: 45px;text-align: center;'>"+hinhsp+"</td>";
-        ttgh += "<td>"+tensp+"</td>";
-        ttgh += "<td style='text-align: center;'>"+dGia+"</td>";
-        ttgh += "<td style='text-align: center;'>"+Sl+"</td>";
-        ttgh += "<td style='text-align: center;'>"+tt+"</td>";
-        ttgh += "<td><input type='button' value='Sửa' style='width: 60px;height: 30px;' onclick='Sua(this)'></td>";
-        ttgh += "<td><input type='button' value='Xóa' style='width: 60px;height: 30px;' onclick='Xoa(this)'></td>";
+        ttgh += "<td>"+ j +"</td>";
+        ttgh += "<td style='width: 45px;text-align: center;'>" + hinhsp + "</td>";
+        ttgh += "<td style='text-align: center;'>"+ tensp +"</td>";
+        ttgh += "<td style='text-align: center;'>"+ dGia +"</td>";
+        ttgh += "<td style='text-align: center;' id='"+ j +"'>"+ Sl +"</td>";
+        ttgh += "<td style='text-align: center;'>"+ tt +"</td>";
+        ttgh += "<td style='text-align: center;''><input type='button' value='Xóa'></td>";
+        ttgh += "<input onclick='sub1(this)' style='position: fixed;margin-top: -45px;margin-left: 450px;' type='button' value='-'>";
+        ttgh += "<input onclick='plus1(this)' style='position: fixed;margin-top: -45px;margin-left: 500px;' type='button' value='+'></input>";
         ttgh += "<tr>";
+
         
         togSL=parseInt(Sl,10);
         tongTien.push(tt);
@@ -91,6 +105,25 @@ function showgiohang() {
     console.log(giohang);
     
 }
+
+function sub1(x) {
+    var tn=x.parentElement.parentElement.children;
+    let a = parseInt(tn[1].children[0].children[4].innerHTML);
+    if(a==0){
+        tn[1].children[0].children[4].innerHTML=parseInt(a);
+    }else{
+        a-=1;
+        tn[1].children[0].children[4].innerHTML=parseInt(a);
+    }
+}
+
+function plus1(x) {
+    var tn=x.parentElement.parentElement.children;
+    let a = parseInt(tn[1].children[0].children[4].innerHTML);
+    a+=1;
+    tn[1].children[0].children[4].innerHTML=parseInt(a);
+}
+
 
 function ChSoLuong(x) {
     var bx = document.getElementById(x).innerHTML;

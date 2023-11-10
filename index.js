@@ -41,13 +41,13 @@ function themvaogiohangCH1(a,b,c,d) {
                 let valueToRemove = giohang[i];
                 giohang = giohang.filter(item => item !== valueToRemove);
 
-                // for(let x = 0; x< giohang.length; x++){
-                //     log(giohang[x][3])
-                //     TongAll+=parseInt(giohang[x][3]);
-                // }
-                // console.log(TongAll);
-
-                // document.getElementById('TongSP').innerHTML=;
+                for(let x = 0; x< giohang.length; x++){
+                    console.log(giohang[x][3]);
+                }
+                console.log(TongAll);
+                
+                document.getElementById('TongSP').innerHTML=TongAll;
+                TongAll+=parseInt(giohang[x][3]);
 
             }
         }
@@ -69,12 +69,14 @@ function themvaogiohangCH1(a,b,c,d) {
     //     }
     // }
     
-    // sessionStorage.setItem("tongSL",JSON.stringify(tongSL));
+    sessionStorage.setItem("tongSL",JSON.stringify(tongSL));
 
     sessionStorage.setItem("giohang1",JSON.stringify(giohang));
 }
+let tong=0;
 
 
+let Slg = 0;
 function showgiohang1() {
     var gh = sessionStorage.getItem("giohang1")
     var giohang = JSON.parse(gh);
@@ -86,35 +88,89 @@ function showgiohang1() {
 
     //
     let ttgh="";
-    let tong=0;
+    let dem=giohang.length;
     for(let i=0; i< giohang.length; i++){
         let tt= parseFloat(giohang[i][2])*parseInt(giohang[i][3]);
         tong+=tt;
-        let j=i+1;
+        let s=i+1;
+        let j=i+999999999;
+        let z=i+100000000;
         let hinhsp = "<img src='"+ giohang[i][0] +"' width='45px'>";
         let tensp= giohang[i][1];
         let dGia= giohang[i][2];
         let Sl= giohang[i][3];
+        Slg+=parseInt(Sl,10);
         
+        // ttgh += "<tr>";
+        // ttgh += "<td style='text-align: center;'>"+j+"</td>";
+        // ttgh += "<td style='width: 45px;text-align: center;'>"+hinhsp+"</td>";
+        // ttgh += "<td>"+tensp+"</td>";
+        // ttgh += "<td style='text-align: center;'>"+dGia+"</td>";
+        // ttgh += "<td style='text-align: center;'>"+Sl+"</td>";
+        // ttgh += "<td style='text-align: center;'>"+tt+"</td>";
+        // ttgh += "<td><input type='button' value='Sửa' style='width: 60px;height: 30px;' onclick='Sua(this)'></td>";
+        // ttgh += "<td><input type='button' value='Xóa' style='width: 60px;height: 30px;' onclick='Xoa(this)'></td>";
+        // ttgh += "<tr>";
+
         ttgh += "<tr>";
-        ttgh += "<td style='text-align: center;'>"+j+"</td>";
-        ttgh += "<td style='width: 45px;text-align: center;'>"+hinhsp+"</td>";
-        ttgh += "<td>"+tensp+"</td>";
-        ttgh += "<td style='text-align: center;'>"+dGia+"</td>";
-        ttgh += "<td style='text-align: center;'>"+Sl+"</td>";
-        ttgh += "<td style='text-align: center;'>"+tt+"</td>";
-        ttgh += "<td><input type='button' value='Sửa' style='width: 60px;height: 30px;' onclick='Sua(this)'></td>";
-        ttgh += "<td><input type='button' value='Xóa' style='width: 60px;height: 30px;' onclick='Xoa(this)'></td>";
+        ttgh += "<td>"+ s +"</td>";
+        ttgh += "<td style='width: 45px;text-align: center;'>" + hinhsp + "</td>";
+        ttgh += "<td style='text-align: center;'>"+ tensp +"</td>";
+        ttgh += "<td style='text-align: center;' id='"+ j +"'>"+ dGia +"</td>";
+        ttgh += "<td style='text-align: center;' id='"+ i +"'>"+ Sl +"</td>";
+        ttgh += "<td style='text-align: center;' id='"+ z +"'>"+ tt +"</td>";
+        ttgh += "<td style='text-align: center;'><input type='button' value='Xóa'></td>";
+        ttgh += "<input onclick='sub2(\""+i+"\", \""+j+"\", \""+z+"\")' style='position: fixed;margin-top: -45px;margin-left: 450px;' type='button' value='-'>";
+        ttgh += "<input onclick='plus2(\""+i+"\", \""+j+"\", \""+z+"\", "+dem+", "+s+","+Slg+")' style='position: fixed;margin-top: -45px;margin-left: 500px;' type='button' value='+'></input>";
         ttgh += "<tr>";
         
         document.getElementById('tongSP').innerText=j;
         togSL=parseInt(Sl,10);
         tongTien.push(tt);
-        // tongTien.push(tt);
+
+        tong+=Sl;
     }
     document.getElementById('chitietgiohang').innerHTML=ttgh;
     thanhTien();
-    
+    console.log(tong);
+    document.getElementById('tongSP').innerText=tongSL;
+
+}
+
+
+function sub2(m,n,q) {
+    let x = parseInt(document.getElementById(m).innerText);
+    let y = parseInt(document.getElementById(n).innerText);
+    if(x==0){
+        document.getElementById(m).innerText=parseInt(x);
+    }else{
+        x-=1;
+        document.getElementById(m).innerText=parseInt(x);
+    }
+    let TT= x*y;
+    document.getElementById(q).innerText=parseInt(TT);
+
+
+    document.getElementById('tongSP').innerText=0;
+
+}
+
+function plus2(o,u,k,h,s,b) {
+    console.log(b);
+    let w = parseInt(document.getElementById(o).innerHTML);
+    let e = parseInt(document.getElementById(u).innerHTML);
+    w+=1;
+    document.getElementById(o).innerHTML=parseInt(w);
+    let TT2= w*e;
+    document.getElementById(k).innerHTML=parseInt(TT2);
+
+    if(parseInt(o) == parseInt(h-1)){
+        console.log("Ok Chuan roi");
+    }
+    else{
+        console.log("Sai rồi");
+    }
+    alert(document.getElementById('chitietgiohang').innerHTML);
 }
 
 // //hoàn thiện

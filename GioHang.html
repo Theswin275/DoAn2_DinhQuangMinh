@@ -110,19 +110,43 @@
                         <th style="width:97.5px;text-align: center;">Đơn giá</th>
                         <th style="width:97.5px;text-align: center;">Số lượng</th>
                         <th style="width:97.5px;text-align: center;">Thành tiền</th>
-                        <th style="width:60px;text-align: center;">Sửa</th>
+                        <!-- <th style="width:60px;text-align: center;">Sửa</th> -->
                         <th style="width:60px;text-align: center;float: right;">Xóa</th>
                     </tr>
                     <tbody id="chitietgiohang" style="width: 100%;height: auto;">
-                        
+                        <!-- <td>1</td>
+                        <td><img src="HinhAnh/203534_con-cho-nho-mang-gio-hoa-hong-bia-mem.jpg" width="100px" alt="" srcset="">...</td>
+                        <td style="text-align: center;">abc</td>
+                        <td style="text-align: center;">0</td>
+                        <td style="text-align: center;">1</td>
+                        <td style="text-align: center;">0</td>
+                        <td style="text-align: center;"><input type="button" value="Xóa"></td>
+                        <input onclick="sub('amount')" style="position: fixed;margin-top: 98px;margin-left: 450px;" type="button" value="-">
+                        <input onclick="plus('amount')" style="position: fixed;margin-top: 98px;margin-left: 500px;" type="button" value="+"> -->
                     </tbody>
                 </table>
-                <div id="ver" style="width: 200px;height: 39px; background-color: #57c15c;float: right;">
+                <div id="ver" style="width: 80px;height: 39px; float: right;">
                     <input type="button" value="Xóa tất cả" id="btnXoa" onclick="XoaTatCa()">
                 </div>
-                <div id="ver" style="width: 200px;height: 39px; background-color: #57c15c;float: right;margin-right: 10px;">
-                    <input type="button" value="Cập nhập" id="btnCapNhap" onclick="CapNhap('buy-amount1')">
-                </div>
+                <!-- <div id="ver" style="width: 80px;height: 39px; float: right;">
+                    <input type="button" value="Cập nhật" id="btnCapNhat" onclick="CapNhat('buy-amount1')">
+                </div> -->
+                <!-- <div id="buy-amount1" style="opacity: 0; float: right;">
+                    <button class="minus-btn" onclick="sub('amount')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                        </svg>
+        
+                    </button>
+                    <input type="text" name="amount" id="amount" value="1">
+                    <button class="plus-btn" onclick="plus('amount')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <button type="button" onclick="SuaSoLuong('amount','buy-amount1')" style="width: 60px;" >Chọn</button>
+                    <button type="button" onclick="HuySua('buy-amount1')" style="width: 60px;">Hủy</button>
+                </div> -->
             </div>
             <div id="span4">
                 <div id="title_tom_tat">
@@ -159,24 +183,9 @@
         </div>
         <div id="box_bt_payment">
             <a id="bt_thanh_toan" href="#">THANH TOÁN</a>
-            <a id="bt_quay_lai" href="#" onclick="ChSoLuong('tongSP')">QUAY LẠI</a>
+            <a id="bt_quay_lai" href="#">QUAY LẠI</a>
         </div>
-        <div id="buy-amount1" style="opacity: 0;">
-            <button class="minus-btn" onclick="sub('amount')">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                </svg>
-
-            </button>
-            <input type="text" name="amount" id="amount" value="1">
-            <button class="plus-btn" onclick="plus('amount')">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-            </button>
-            <button type="button" onclick="SuaSoLuong('amount','buy-amount1')" >Chọn</button>
-            <button type="button" onclick="HuySua('buy-amount1')">Hủy</button>
-        </div>
+        
     </div>
     
     <script src="TrangChiTietSanPham.js"></script>
