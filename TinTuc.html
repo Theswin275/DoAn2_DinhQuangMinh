@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Vinabook - hiệu sách online trực tuyến cho mọi người</title>
+    <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
+    <link rel="stylesheet" type="text/css" href="TinTuc.css" />
+    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Tìm tất cả các li có sub-menu và thêm vào nó class has-child
+            $('.sub-menu').parent('li').addClass('has-child')
+        });
+    </script>
+</head>
+<body>
+    <div id="Dau_Trang_Web">
+        <div id="container">
+            <a style="width: 108px;height: 14px; text-align: left;"><img src="HinhAnh/cargo-truck.png">Miễn phí giao
+                hàng</a>
+            <span style="text-align: left;">|</span>
+            <a style="width: 79px;height: 14px; text-align: left; margin-left: 10px;"><img src="HinhAnh/book.png">80.000
+                tựa sách</a>
+            <span style="text-align: left;">|</span>
+            <a style="width: 82px;height: 14px; text-align: left; margin-left: 10px;"><img
+                    src="HinhAnh/smartphone-call.png">Vinabook Reader</a>
+        </div>
+    </div>
+    <div id="top_panel">
+        <div id="row1">
+            <div id="logo">
+                <img src="HinhAnh/vnb_logo_2x.png">
+            </div>
+            <div id="Tim_Kiem">
+                <img src="HinhAnh/search.png">
+                <input type="text" style="margin-top: 10px;" id="txtsearch" name="txtsearch"
+                    placeholder="Tìm kiếm tựa sách, tác giả">
+                <input type="button" style="border: none;" id="btnsearch" name="fname" value="Tìm sách">
+                <a href="GioHang.html">
+                    <img src="HinhAnh/icons8-cart-64.png">
+                </a>
+                <div id="Dang_Nhap_Va_Dang_Ky">
+                    <a href="Login.html" style="width: 83px;height:13px;">Đăng nhập</a>
+                    <span style="text-align: right;padding-top: 17px;">|</span>
+                    <a href="SignIn.html" style="width: 65px;height:13px;">Đăng ký</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="header1">
+        <div id="header">
+            <nav class="container">
+                <!-- <a href="" id="logo_menu">
+                        <img src="HinhAnh/icons8-list-50.png" style="width: 30px; height: 30px;margin-top: 7px;">
+                    </a> -->
+                <ul id="main-menu">
+                    <li>
+                        <img src="HinhAnh/icons8-list-50.png"
+                            style="width: 30px; height: 30px;margin-top: 7px;float: left;">
+                        <a href="#" style="color: #f3f3f3;width: 150px; margin-left: 60px;">Danh Mục Sách</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="Ho_Tro">
+                <b><a><img src="HinhAnh/phone-68-24.png" style="margin-right: 5px;">Hotline: 1900 6401</a></b>
+                <span style="color: white;">|</span>
+                <b><a href="#" id="Ho_Tro_Truc_Tuyen"><img src="HinhAnh/speech-bubble-24.png"
+                            style="margin-right: 5px;">Hỗ trợ trực tuyến</a>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper_SachTheoDanhMuc">
+        <div id="span14">
+            <div id="breadcrumbs">
+                <span><a href="" style="text-decoration: none; color: #000;">Trang chủ</a></span>
+                <span>></span>
+                <span><a href="" style="text-decoration: none;color: #000;">Tin tức sách</a></span>
+                <span>></span>
+                <span><a href="" style="text-decoration: none;color: #000;">Tin tức</a></span>
+            </div>
+        </div>
+        <div id="row">
+            <div id="span3">
+                <li class="bold">
+                    <a>Kho Sách Giảm Giá</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Sách Bán Chạy</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Sách Mới Phát Hành</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Sách Sắp Phát Hành</a>
+                    <span style="float: right;">></span>
+                </li>
+                <li class="bold">
+                    <a>Combo Ưu Đãi</a>
+                    <span style="float: right;">></span>
+                </li>
+                
+            </div>
+            <div id="span9">
+                <div class="mainbox2_title">
+                    <span id="mainbox2_title_span">Tin tức</span><br>
+                    <span>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+                </div>
+                <div id="mainbox2_body">
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Việt Nam mua bản quyền tác phẩm sắp ra mắt của Dan Brown</a><br>
+                            <span class="article-time">Feb 9, 2018 16:14:00</span><br>
+                            <span class="article-description">Bách Việt Books, đơn vị đã mua được bản quyền chuyển ngữ và phát hành bản tiếng Việt của Origin cho biết mặc dù con số cụ thể không được phép tiết lộ nhưng mức giá bản quyền cuốn này cao gấp đôi bản quyền Inferno - Hỏa ngục phát hành năm 2014.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">'Lời hứa về một cây bút chì' - cuốn sách truyền cảm hứng sống</a><br>
+                            <span class="article-time">Aug 5, 2016 11:32:00</span><br>
+                            <span class="article-description">Cuốn sách kể hành trình theo đuổi mục đích sống cao cả của chàng trai trẻ người Mỹ - Adam Braun, từ chỗ chỉ sở hữu 25 USD tới xây 250 trường học khắp thế giới.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Bộ sách đồng hành cùng phim hoạt hình 'Đi tìm Dory'</a><br>
+                            <span class="article-time">Jun 27, 2016 16:22:00</span><br>
+                            <span class="article-description">Hành trình của chú cá Nemo và cô cá Dory được thể hiện với nét vẽ sống động và câu chuyện chứa đựng thông điệp sống tích cực.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    <div class="large">
+                        <img src="HinhAnh/no_image.png">
+                        <div class="article-info">
+                            <a class="article-title" href="#">Sách mới nhất của Dan Brown được mua bản quyền hàng trăm triệu đồng</a><br>
+                            <span class="article-time">Feb 9, 2018 16:13:00</span><br>
+                            <span class="article-description">Đại diện đơn vị giữ bản quyền cuốn "Origin" tại Việt Nam cho biết họ chi ra khoản tiền kỷ lục để xuất bản sách.</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div id="pagination_bottom">
+                    <span>Trang 1/124</span>
+                    <a class="cm_history" style="background-color:#2ba40d;" href="#">1</a>
+                    <a class="cm_history" href="#">2</a>
+                    <a class="cm_history" href="#">3</a>
+                    <a class="cm_history" href="#">4</a>
+                    <a class="cm_history" href="#">5</a>
+                    <a class="cm_history" href="#">6</a>
+                    <a class="cm_history" href="#">7</a>
+                    <a class="cm_history" href="#">8</a>
+                    <a class="cm_history" href="#">></a>
+                    <a class="cm_history" href="#">2 - 16</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    
+    <div id="footer">
+        <div id="tygh_footer">
+            <div id="news_letter">
+                <label>ĐĂNG KÝ NHẬN EMAIL
+                <span>Đăng ký nhận thông tin sách mới, sách bán</span></label>
+                <div id="input_group">
+                    <input type="text" id="Ten_Cua_Ban" name="Ten_Cua_Ban" placeholder="Tên của bạn">
+                    <input type="text" id="Email_Cua_Ban" name="Email_Cua_Ban" placeholder="Nhập email của bạn">
+                    <select id="Chon_The_Loai_Sach">
+                        <option value="0">Thể loại yêu thích</option>
+                        <option value="1">Tất cả</option>
+                        <option value="2">Sách Ngoại Văn</option>
+                        <option value="3">Sách Kinh Tế</option>
+                        <option value="4">Sách Văn Học Trong Nước</option>
+                        <option value="5">Sách Văn Học Nước Ngoài</option>
+                        <option value="6">Sách Thường Thức - Đời Sống</option>
+                        <option value="7">Sách Thiếu Nhi</option>
+                        <option value="8">Sách Phát Triển Bản thân</option>
+                        <option value="9">Sách Tin Học - Ngoại Ngữ</option>
+                        <option value="10">Sách Chuyên Ngành</option>
+                        <option value="11">Sách Giáo Khoa - Giáo Trình</option>
+                        <option value="12">Tạp Chí - Văn Phòng Phẩm</option>
+                    </select>
+                    <input type="button" id="Dang_Ky_Ngay" name="fname" value="ĐĂNG KÝ NGAY">
+                </div>
+            </div>
+            <div id="row_foot">
+                <div id="span5_footer">
+                    <div id="span4">
+                        <span>VỀ CÔNG TY</span><br>
+                        <a href="#">Giới thiệu công ty</a>
+                        <a href="#">Tuyển dụng</a>
+                        <a href="#">Góc báo chí</a>
+                        <a href="#">Chương trình đại lý</a>
+                        <a href="#">Chính sách bảo mật</a> 
+                        <a href="#">Chính sách đổi trả</a>
+                    </div>
+                    <div id="span4">
+                        <span>TRỢ GIÚP</span><br>
+                        <a href="#">Quy định sử dụng</a>
+                        <a href="#">Hướng dẫn mua hàng</a>
+                        <a href="#">Phương thức thanh toán</a>
+                        <a href="#">Phương thức vận chuyển</a>
+                        <a href="#">Các câu hỏi thường gặp</a> 
+                        <a href="#">Ứng dụng đọc ebook</a>
+                    </div>
+                    <div id="span4">
+                        <span style="width: 105px;">TIN TỨC SÁCH</span><br>
+                        <a href="#">Tin tức</a>
+                        <a href="#">Chân dung</a>
+                        <a href="#">Điểm sách</a>
+                        <a href="#">Phê bình</a>
+                    </div>
+                    <div id="Tai_Ung_Dung">
+                        <span>TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</span>
+                        <img src="HinhAnh/icon-appstore.png">
+                        <img src="HinhAnh/icon-googleplay.png" style="margin-left: 10px;">
+                    </div>
+                </div>
+                <div id="span7_footer">
+                    <div class="span8">
+                        <span>CHẤP NHẬN THANH TOÁN</span>
+                        <img src="HinhAnh/visa.jpg">
+                        <img src="HinhAnh/master_card.jpg">
+                        <img src="HinhAnh/jcb.jpg">
+                        <img src="HinhAnh/atm.jpg">
+                        <img src="HinhAnh/cod.jpg">
+                        <img src="HinhAnh/payoo.jpg">                       
+                        <span style="margin-top: 10px;">THANH TOÁN AN TOÀN</span>
+                        <img src="HinhAnh/verify_visa.jpg">
+                        <img src="HinhAnh/mastercard_securecode.jpg">
+                        <img src="HinhAnh/onepay.jpg">  
+                    </div>
+                    <div class="span8">
+                        <span>ĐỐI TÁC VẬN CHUYỂN</span>
+                        <img src="HinhAnh/logovnb.png">
+                        <img src="HinhAnh/vn-post.jpg">
+                        <img src="HinhAnh/dhl.jpg" style="width: 184px;height: 52px;"> 
+                    </div>
+                    <div class="span8">
+                        <span>ĐỐI TÁC BÁN HÀNG</span>
+                        <img src="HinhAnh/lazada.jpg">
+                        <img src="HinhAnh/shopee.jpg">
+                        <img src="HinhAnh/amazon.jpg"> 
+                    </div>
+                </div>
+            </div>
+            <div id="span12">
+                <span>THƯỜNG ĐƯỢC TÌM KIẾM</span>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">truyện dan brown</a>
+                    <a href="#">sách hay về gia đình</a>
+                    <a href="#">sách học tiếng trung</a>
+                    <a href="#">sách blockchain</a>
+                    <a href="#">sách khởi nghiệp</a>
+                    <a href="#">sách quản lý nhân sự</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách warren buffett</a>
+                    <a href="#">giáo trình tiếng anh trẻ em</a>
+                    <a href="#">tiểu thuyết tình yêu</a>
+                    <a href="#">sách du học</a>
+                    <a href="#">sách bán hàng</a>
+                    <a href="#">sách về quản trị kinh doanh</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách digital marketing</a>
+                    <a href="#">sách hay về kinh tế</a>
+                    <a href="#">sách y học</a>
+                    <a href="#">sách kỹ năng mềm</a>
+                    <a href="#">sách về đầu tư chứng khoán</a>
+                    <a href="#">sách tài chính</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">truyện mới của nguyễn nhật ánh</a>
+                    <a href="#">sách về đầu tư</a>
+                    <a href="#">tủ sách gia đình</a>
+                    <a href="#">sách làm giàu</a>
+                    <a href="#">sách dạy nấu ăn</a>
+                    <a href="#">sách hay cho thiếu nhi</a>
+                </div>
+                <div class="Thuong_Tim_Kiem">
+                    <a href="#">sách cho con</a>
+                    <a href="#">sách doanh nhân</a>
+                    <a href="#">sách dạy kỹ năng giao tiếp</a>
+                    <a href="#">sách phong thủy cổ</a>
+                    <a href="#">sách tâm lý về tình yêu</a>
+                    <a href="#">sách tự học tiếng anh giao tiếp</a>
+                </div>
+            </div>
+            <div id="copyright">
+                <div id="row_fuild">
+                    <img src="HinhAnh/logo_so_cong_thuong.png" style="float: left;">
+                    <div id="span13">
+                        <p>CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MÊ KÔNG COM</p>
+                        <span>Địa chỉ: 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, Hồ Chí Minh</span><br>
+                        <span>MST: 0303615027 do Sở Kế Hoạch Và Đầu Tư Tp.HCM cấp ngày 10/03/2011</span><br>
+                        <span>Tel: 028.73008182 - Fax: 028.39733234 - Email: <a href="#">hotro@vinabook.com</a></span>
+                    </div>
+                    <div id="span20">
+                        <p>WEBSITE CÙNG HỆ THỐNG</p>
+                        <img src="HinhAnh/logo_hotdeal_2x.png" style="width: 152px;height: 22px;">
+                        <img src="HinhAnh/logo_yesgo_2x.png" style="width: 146px;height: 40px;">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
