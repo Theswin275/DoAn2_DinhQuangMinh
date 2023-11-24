@@ -121,8 +121,8 @@
                         <td style="text-align: center;">1</td>
                         <td style="text-align: center;">0</td>
                         <td style="text-align: center;"><input type="button" value="Xóa"></td>
-                        <input onclick="sub('amount')" style="position: fixed;margin-top: 98px;margin-left: 450px;" type="button" value="-">
-                        <input onclick="plus('amount')" style="position: fixed;margin-top: 98px;margin-left: 500px;" type="button" value="+"> -->
+                        <input onclick="sub('amount')" style="position:absolute;margin-top: 98px;margin-left: 450px;" type="button" value="-">
+                        <input onclick="plus('amount')" style="position: absolute;margin-top: 98px;margin-left: 500px;" type="button" value="+"> -->
                     </tbody>
                 </table>
                 <div id="ver" style="width: 80px;height: 39px; float: right;">
@@ -163,8 +163,7 @@
                     </div>
                     <div style="width: 318px; height: 22px;">
                         <span  style="width: 191px; height: 22px;text-align: left; float: left;font-weight: 700;">TẠM TÍNH</span>
-                        <span id="TamTinh"
-                            style="width: 127px; height: 22px; text-align: right; float: right; color:#117c47">1.080.000đ</span>
+                        <span id="TamTinh" style="width: 127px; height: 22px; text-align: right; float: right; color:#117c47">1.080.000đ</span>
                     </div>
                     <br>
                     <div id="italic_right">
@@ -195,6 +194,8 @@
      <script src="index.js"></script>
      <script>
          showgiohang1();
+         nhanSoLuongNe();
+         nhanSoTienNe();
      </script>
     
 </body>

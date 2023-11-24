@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Admin.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1 style="color: white;">Vinabook.com</h1>
+        </div>
+        <ul>
+            <li><a href="QuanLySach.html"><img src="HinhAnh/open-book.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;" >Quản lý sách</span></a></li>
+            <li><a href="QuanLyTheLoaiSach.html"><img src="HinhAnh/icons8-books-48.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý thể loại sách</span></a> </li>
+            <li><a href="QuanLyNhaXuatBan.html"><img src="HinhAnh/icons8-company-48.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý nhà xuất bản</span></a> </li>
+            <li><a href="QuanLyTacGia.html"><img src="HinhAnh/icons8-author-94.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý tác giả</span></a> </li>
+            <li><a href="QuanLyNhaCungCap.html"><img src="HinhAnh/icons8-supplier-94.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý nhà cung cấp</span></a> </li>
+            <li><a href="QuanLyDonNhapSach.html"><img src="HinhAnh/icons8-form-100.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý đơn nhập sách</span></a> </li>
+            <li><a href="QuanLyDonDatHang.html"><img src="HinhAnh/icons8-purchase-order-48.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý đơn đặt hàng</span></a> </li>
+            <li><a href="QuanLyTinTuc.html"><img src="HinhAnh/icons8-news-48.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý tin tức</span></a> </li>
+            <li><a href="QuanLyNhanVien.html"><img src="HinhAnh/icons8-staff-48.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý nhân viên</span></a> </li>
+            <li><a href="QuanLyKhachHang.html"><img src="HinhAnh/icons8-buyer-48.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Quản lý khách hàng</span></a> </li>
+            <li><a href="#.html"><img src="HinhAnh/icons8-analytics-100.png" style="width: 30px; height: 30px;">&nbsp; <span style="color: white; float: right; margin-top: 7px;">Thống kê</span></a> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm" style="margin-left: 400px;">
+                    <button type="submit"><img src="HinhAnh/search.png"></button>
+                </div>
+                <div class="user">
+                    <img src="HinhAnh/notifications.png" style="margin-left: 170px;">
+                    <div class="img-case">
+                        <img src="HinhAnh/user.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="TimKiem">
+                        <label for="gsearch" style="margin-left: 245px;">Mã thể loại sách:</label>
+                        <input type="search" id="gsearch" name="gsearch" style="width: 500px;margin-left: 6px;"><br/><br/>
+                        <label for="gsearch" style="margin-left: 272px">Thể loại sách:</label>
+                        <input type="search" id="gsearch" name="gsearch" style="width: 500px;"><br/><br/>
+                        <button type="button">Tìm kiếm</button>
+                    </div>           
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2 style="width: 90%; float: left;">Thể loại sách</h2>
+                        <button type="button" style="float: left;">+ Thêm mới</button>
+                    </div>
+                    
+                    <table>
+                        <tr>
+                            <th><input type="checkbox" id="DonDatHangAll" name="TatCaDonDatHang" value="All"></th>
+                            <th>Mã thể loại sách</th>
+                            <th>Thể loại sách</th>
+                            <th>Tác vụ</th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="DonDatHangAll" name="TatCaDonDatHang" value="All"></th>
+                            <td>TLS01</td>
+                            <td>Văn học</td>
+                            <td><img style="width: 25px; height: 25px; margin-bottom: 4px;" src="HinhAnh/icons8-edit-50.png"><img style="margin-left: 5px;" src="HinhAnh/icons8-delete-80.png"></td>
+                        </tr>
+                    </table>
+                    <button type="button" style="margin-left: 1070px;">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

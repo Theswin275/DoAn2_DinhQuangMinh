@@ -2,13 +2,11 @@ var giohang = new Array();
 var tongTien = new Array();
 var stt = 0;
 var tongSL=0;
-// let j = 0;
 
 let chuoiKtra;
 let chuoiSoSanh; 
 var SoCongVao = 0;
 var TongSo = 0;
-// var TongAll = 0;
 
 function themvaogiohangCH1(a,b,c,d) {
     
@@ -54,21 +52,6 @@ function themvaogiohangCH1(a,b,c,d) {
         console.log('-----',i)
     }
     
-    
-    // if (giohang.length < 1){
-    //     tongSL+=parseInt(item[3], 10);
-    //     document.getElementById('soGioHang').innerHTML=tongSL;
-    // }
-    // else{
-    //     for (let j = 0; j < giohang.length; j++) {
-    //         if (item[j]==giohang[j][1]){
-    //             tongSL+=parseInt(item[3], 10);
-    //             giohang[j][3]=tongSL;
-    //             document.getElementById('soGioHang').innerHTML=tongSL;
-    //         }
-    //     }
-    // }
-    
     sessionStorage.setItem("tongSL",JSON.stringify(tongSL));
 
     sessionStorage.setItem("giohang1",JSON.stringify(giohang));
@@ -80,13 +63,6 @@ let Slg = 0;
 function showgiohang1() {
     var gh = sessionStorage.getItem("giohang1")
     var giohang = JSON.parse(gh);
-    // console.log(giohang);
-    //
-    // var ok = sessionStorage.getItem("tongSL");
-    // var oke = JSON.parse(ok);
-    // sessionStorage.setItem("tongSLquayLai",JSON.stringify(oke));
-
-    //
     let ttgh="";
     let dem=giohang.length;
     for(let i=0; i< giohang.length; i++){
@@ -100,17 +76,6 @@ function showgiohang1() {
         let dGia= giohang[i][2];
         let Sl= giohang[i][3];
         Slg+=parseInt(Sl,10);
-        
-        // ttgh += "<tr>";
-        // ttgh += "<td style='text-align: center;'>"+j+"</td>";
-        // ttgh += "<td style='width: 45px;text-align: center;'>"+hinhsp+"</td>";
-        // ttgh += "<td>"+tensp+"</td>";
-        // ttgh += "<td style='text-align: center;'>"+dGia+"</td>";
-        // ttgh += "<td style='text-align: center;'>"+Sl+"</td>";
-        // ttgh += "<td style='text-align: center;'>"+tt+"</td>";
-        // ttgh += "<td><input type='button' value='Sửa' style='width: 60px;height: 30px;' onclick='Sua(this)'></td>";
-        // ttgh += "<td><input type='button' value='Xóa' style='width: 60px;height: 30px;' onclick='Xoa(this)'></td>";
-        // ttgh += "<tr>";
 
         ttgh += "<tr>";
         ttgh += "<td>"+ s +"</td>";
@@ -119,9 +84,9 @@ function showgiohang1() {
         ttgh += "<td style='text-align: center;' id='"+ j +"'>"+ dGia +"</td>";
         ttgh += "<td style='text-align: center;' id='"+ i +"'>"+ Sl +"</td>";
         ttgh += "<td style='text-align: center;' id='"+ z +"'>"+ tt +"</td>";
-        ttgh += "<td style='text-align: center;'><input type='button' value='Xóa'></td>";
-        ttgh += "<input onclick='sub2(\""+i+"\", \""+j+"\", \""+z+"\")' style='position: fixed;margin-top: -45px;margin-left: 450px;' type='button' value='-'>";
-        ttgh += "<input onclick='plus2(\""+i+"\", \""+j+"\", \""+z+"\", "+dem+", "+s+","+Slg+")' style='position: fixed;margin-top: -45px;margin-left: 500px;' type='button' value='+'></input>";
+        ttgh += "<td style='text-align: center;'><input type='button' value='Xóa' onclick='Xoa(this);'></td>";
+        ttgh += "<td><input onclick='sub2(\""+i+"\", \""+j+"\", \""+z+"\");TruSL();' style='position: absolute;margin-top: -13px;margin-left: -250px;' type='button' value='-'></td>";
+        ttgh += "<td><input onclick='plus2(\""+i+"\", \""+j+"\", \""+z+"\");CongSL();' style='position: absolute;margin-top: -13px;margin-left: -200px;' type='button' value='+'></input></td>";
         ttgh += "<tr>";
         
         document.getElementById('tongSP').innerText=j;
@@ -143,59 +108,90 @@ function sub2(m,n,q) {
     let y = parseInt(document.getElementById(n).innerText);
     if(x==0){
         document.getElementById(m).innerText=parseInt(x);
+        document.getElementById('tongSP').innerText=0;
     }else{
         x-=1;
         document.getElementById(m).innerText=parseInt(x);
+        let TT= x*y;
+        document.getElementById(q).innerText=parseInt(TT);
+        var TienHienTai0 = document.getElementById('TamTinh').innerText;
+        TienHienTai0 = parseInt(TienHienTai0) - y;
+        document.getElementById('TamTinh').innerText = TienHienTai0;
+        document.getElementById('TongCong').innerText = TienHienTai0;
     }
-    let TT= x*y;
-    document.getElementById(q).innerText=parseInt(TT);
-
-
-    document.getElementById('tongSP').innerText=0;
-
 }
 
-function plus2(o,u,k,h,s,b) {
-    console.log(b);
+function plus2(o,u,k) {
     let w = parseInt(document.getElementById(o).innerHTML);
     let e = parseInt(document.getElementById(u).innerHTML);
     w+=1;
     document.getElementById(o).innerHTML=parseInt(w);
     let TT2= w*e;
-    document.getElementById(k).innerHTML=parseInt(TT2);
+    document.getElementById(k).innerHTML=parseInt(TT2);    
 
-    if(parseInt(o) == parseInt(h-1)){
-        console.log("Ok Chuan roi");
-    }
-    else{
-        console.log("Sai rồi");
-    }
-    alert(document.getElementById('chitietgiohang').innerHTML);
+    var TienHienTai = document.getElementById('TamTinh').innerText;
+    TienHienTai = parseInt(TienHienTai) + e;
+    document.getElementById('TamTinh').innerText = TienHienTai;
+    document.getElementById('TongCong').innerText = TienHienTai;
 }
 
-// //hoàn thiện
-// // function thanhTien(){
-// //     let thanhTienAll = 0;
-// //     for (let z = 0; z< tongTien.length; z++){
-// //         thanhTienAll+=tongTien[z];
-// //     }
-// //     document.getElementById('TamTinh').innerHTML=thanhTienAll+'đ';
-// //     document.getElementById('TongCong').innerHTML=thanhTienAll+'đ';
 
-// //     // truTien = thanhTienAll;
-// // }
+//xử lý số lượng
+let a = 0;
+function tuCongSoLuong(){
+    a=a+1;
+    sessionStorage.setItem("tongSLneee",JSON.stringify(a));
+}
 
-// // let togSL;
-// // let truTien = 0;
-// // let capnhaptien = 0;
-// function Xoa(x){
-//     var ty=x.parentElement.parentElement;
-//     var tr=x.parentElement.parentElement.children;
-//     var truuSL = tr[4].innerHTML;
-//     truTien-=parseInt(capnhaptien, 10);
-//     document.getElementById('TamTinh').innerHTML=truTien+'đ';
-//     document.getElementById('TongCong').innerHTML=truTien+'đ';
-//     document.getElementById('tongSP').innerText=0;
-//     togSL-=parseInt(truuSL);
-//     ty.remove();   
-// }
+function nhanSoLuongNe(){
+    var gh = sessionStorage.getItem("tongSLneee")
+    document.getElementById('tongSP').innerText = gh;
+}
+
+// xử lý tiền
+let b = 0;
+function tuCongSoTien(x){
+    let l = document.getElementById(x).innerHTML;
+    b=b+ parseInt(l);
+    sessionStorage.setItem("tongTienneee",JSON.stringify(b));
+}
+
+function nhanSoTienNe(){
+    var gz = sessionStorage.getItem("tongTienneee")
+    document.getElementById('TamTinh').innerText = gz;
+    document.getElementById('TongCong').innerText = gz;
+}
+
+//Trừ số lượng khi thay đổi
+function TruSL(){
+    var f = document.getElementById('tongSP').innerText;
+    f = parseInt(f) - 1;
+    document.getElementById('tongSP').innerText = f;
+}
+
+//Cộng số lượng khi thay đổi
+function CongSL(){
+    var j = document.getElementById('tongSP').innerText;
+    j = parseInt(j) + 1;
+    document.getElementById('tongSP').innerText = j;
+}
+
+// Xóa riêng
+function Xoa(x){
+    var ty=x.parentElement.parentElement;
+    var tr=x.parentElement.parentElement.children;
+    var truuSL = tr[4].innerHTML; //lấy ra được số lượng sản phẩm SanPham ấy hiện tại
+    var truuTT = tr[5].innerHTML; //lấy ra được tổng tiền sản phẩm SanPham ấy hiện tại
+    console.log(x.parentElement.parentElement);
+
+    var TongSPHienTaiTatCa = document.getElementById('tongSP').innerText;
+    TongSPHienTaiTatCa = parseInt(TongSPHienTaiTatCa) - truuSL;
+    document.getElementById('tongSP').innerText = TongSPHienTaiTatCa;
+
+    var TongTienHienTaiTatCa = document.getElementById('TamTinh').innerText;
+    TongTienHienTaiTatCa = parseInt(TongTienHienTaiTatCa) - truuTT;
+    document.getElementById('TamTinh').innerText = TongTienHienTaiTatCa;
+    document.getElementById('TongCong').innerText = TongTienHienTaiTatCa;
+
+    ty.remove();   
+}
