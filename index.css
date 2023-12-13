@@ -764,7 +764,7 @@ nav {
     width: 256px;
     height: 17px;
     display: inline;
-    font-family: Montserrat-Light;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-align: left;
@@ -992,6 +992,7 @@ text-align:left;
 }
 .title_book_r
 {
+    
     width: 187px;
     height: 37px;
     color:#66645c;
@@ -1132,7 +1133,7 @@ background-color:#ffffff;
 border-radius:5px;
 box-shadow:#ffffff 0px 1px 0px 0px;
 color:#0a6f3c;
-font-family:Montserrat-Light;
+font-family:Arial, Helvetica, sans-serif;
 font-weight:100;
 line-height:20px;
 margin:10px 0px 0px 5px;
@@ -1199,7 +1200,7 @@ float: left;
     width: 160px;
     height: 22px;
     color:#888888;
-font-family:Montserrat-Light;
+font-family:Arial, Helvetica, sans-serif;
 font-size:13px;
 padding:3px 0px;
 text-align:left;

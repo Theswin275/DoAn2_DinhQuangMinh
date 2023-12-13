@@ -13,43 +13,10 @@
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
-            //Tìm tất cả các li có sub-menu và thêm vào nó class has-child
+
             $('.sub-menu').parent('li').addClass('has-child')
         });
     </script>
-    <!-- <script>
-        $(document).ready(function () {
-        $(".button_cart").click(function () {
-        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
-        //alert(cartAmount);
-        if (cartAmount != null)
-            cartAmount += 1;
-        else
-            cartAmount = 1;
-        $("#cart").text("(" + cartAmount + ")");
-        sessionStorage.setItem("cartAmount", cartAmount);
-        var pImg = $(this).parent().parent().parent().parent().find(".item-photo").attr("src");
-        var pName = $(this).parent().parent().parent().parent().find(".product-name").text();
-        var pPrice = $(this).parent().parent().parent().parent().find(".new-price").text();
-        var product = {
-            "img": pImg,
-            "name": pName,
-            "price": pPrice
-        };
-
-        //alert(pImg +" "+pName+" "+pPrice);
-        var cart = sessionStorage.getItem("cart");
-        var cartProducts = "";
-        if (cart != null) {
-            cartProducts = cart + "," + JSON.stringify(product);
-        } else
-            cartProducts = JSON.stringify(product);
-        sessionStorage.setItem("cart", cartProducts);
-        //alert(cartProducts);					
-    });
-
-});
-    </script> -->
     
 </head>
 
@@ -94,9 +61,6 @@
     <div id="header1">
         <div id="header">
             <nav class="container">
-                <!-- <a href="" id="logo_menu">
-                        <img src="HinhAnh/icons8-list-50.png" style="width: 30px; height: 30px;margin-top: 7px;">
-                    </a> -->
                 <ul id="main-menu">
                     <li>
                         <img src="HinhAnh/icons8-list-50.png"
@@ -570,7 +534,7 @@
                         src="HinhAnh/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg">
                     <div class="text_info_book">
                         <div class="box_title_book">
-                            <a href="#" class="product_title">Sapiens - Lược Sử L...</a>
+                            <a href="TrangChiTietSanPham.html" class="product_title">Sapiens - Lược Sử L...</a>
                             <span style="width: 151px; height: 19px;font-size: 12px; text-align:left;">Yuval Noah
                                 Harari</span>
                             <span>_____________________</span>

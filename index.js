@@ -30,12 +30,14 @@ function themvaogiohangCH1(a,b,c,d) {
         SoCongVao = parseInt(giohang[i][3]);
         for (let j = 0; j < giohang.length-1; j++) {
             chuoiSoSanh = giohang[j][1];
+            //Nếu sản phẩm đã tồn tại, nó sẽ cộng số lượng sản phẩm vào sản phẩm đó trong giỏ hàng và xóa sản phẩm mới thêm vào (để tránh trùng lặp).
             if (chuoiKtra == chuoiSoSanh){
                 TongSo = parseInt(giohang[j][3]);
                 TongSo+=SoCongVao;
                 giohang[j][3]=TongSo;
                 SoCongVao = 0;
 
+                //Xóa sp thừa
                 let valueToRemove = giohang[i];
                 giohang = giohang.filter(item => item !== valueToRemove);
 
@@ -194,4 +196,10 @@ function Xoa(x){
     document.getElementById('TongCong').innerText = TongTienHienTaiTatCa;
 
     ty.remove();   
+}
+function NhanDuLieu() {
+    var gg = sessionStorage.getItem("guilaiSogiohang");
+    let DuLieuNhanVe = JSON.parse(gg);
+    console.log(DuLieuNhanVe);
+    document.getElementById('soGioHang1').innerHTML=DuLieuNhanVe;
 }

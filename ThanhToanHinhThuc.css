@@ -227,7 +227,7 @@ padding:0px 160px;
 #info_dia_chi_giao_hang
 {
     width: 415px;
-    height: 673px;
+    height: 450px;
     color:#66645c;
 font-size:13px;
 grid-area:auto;
@@ -247,7 +247,7 @@ text-transform:uppercase;
 }
 #data_ct_address
 {
-    width: 394px;
+    width: 400px;
     height: 439px;
     color:#66645c;
 font-size:13px;
@@ -305,7 +305,7 @@ font-family:Arial, Helvetica, sans-serif;
 font-size:13px;
 grid-area:auto;
 line-height:20px;
-margin-left: 180px;
+margin-left: 167px;
 padding:8px 15px;
 text-align:center;
 text-transform:uppercase;
@@ -317,14 +317,14 @@ text-transform:uppercase;
 }
 #data_ct_address p
 {
-    width: 394px;
-    height: 25px;
-    color:#66645c;
+    width: 310px;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:13px;
-    grid-area:auto;
-    padding:6px 0px 3px;
-    text-align:center;
+    margin-left: 125px;
+
+}
+#data_ct_address input
+{
+    margin-left: 105px;
 }
 #ghi_chu_giao_hang
 {

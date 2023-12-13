@@ -13,44 +13,11 @@
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
-            //Tìm tất cả các li có sub-menu và thêm vào nó class has-child
             $('.sub-menu').parent('li').addClass('has-child')
         });
     </script>
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
-    <!-- <script>
-        $(document).ready(function () {
-        $(".button_cart").click(function () {
-        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
-        //alert(cartAmount);
-        if (cartAmount != null)
-            cartAmount += 1;
-        else
-            cartAmount = 1;
-        $("#cart").text("(" + cartAmount + ")");
-        sessionStorage.setItem("cartAmount", cartAmount);
-        var pImg = $(this).parent().parent().parent().find(".item-photo").attr("src");
-        var pName = $(this).parent().parent().parent().find(".product-name").text();
-        var pPrice = $(this).parent().parent().parent().find(".new-price").text();
-        var product = {
-            "img": pImg,
-            "name": pName,
-            "price": pPrice
-        };
 
-        //alert(pImg +" "+pName+" "+pPrice);
-        var cart = sessionStorage.getItem("cart");
-        var cartProducts = "";
-        if (cart != null) {
-            cartProducts = cart + "," + JSON.stringify(product);
-        } else
-            cartProducts = JSON.stringify(product);
-        sessionStorage.setItem("cart", cartProducts);
-        //alert(cartProducts);					
-            });
-
-        });
-    </script> -->
     
 </head>
 
@@ -95,9 +62,6 @@
     <div id="header1">
         <div id="header">
             <nav class="container">
-                <!-- <a href="" id="logo_menu">
-                            <img src="HinhAnh/icons8-list-50.png" style="width: 30px; height: 30px;margin-top: 7px;">
-                        </a> -->
                 <ul id="main-menu">
                     <li>
                         <img src="HinhAnh/icons8-list-50.png"
@@ -308,7 +272,7 @@
                             bán</span>
                         <span
                             style="min-width: 83px;height: 24px;color:#ca2027;font-size:20px;line-height:24px;margin:0px 2px 0px 0px;text-align:left;margin-left: 105px;"
-                            id="new-price" class="new-price">293<a>000</a></span>
+                            id="new-price" class="new-price">293<a>000đ</a></span>
                         <span
                             style="width: 51px;height: 23px;color:#404040;font-size:15px;line-height:23.07px;text-align:left">Tiết
                             kiệm</span>
