@@ -10,6 +10,7 @@
     <link rel="icon" type="images/x-icon" href="HinhAnh/logo.png" />
     <link rel="stylesheet" type="text/css" href="ThanhToan.css" />
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="ThanhToan.js"></script>
 </head>
 <body>
     <div id="tygh_top_panel1">
@@ -21,61 +22,85 @@
                 Thanh toán
             </div>
             <div id="box_info_step">
-                <div id="info_dia_chi_giao_hang">
-                    <div id="tt_dia_chi">
-                        Địa chỉ giao hàng
-                    </div>
-                    <div id="data_ct_address">
-                        <div class="control_group">
-                            <label>Họ và tên</label>
-                            <input type="text" placeholder="Họ và tên" style="margin-left: 18px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Điện thoại</label>
-                            <input type="text" placeholder="Điện thoại" style="margin-left: 14px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Quốc gia</label>
-                            <input type="text" placeholder="Quốc gia" style="margin-left: 22px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Tỉnh thành</label>
-                            <input type="text" placeholder="Tỉnh thành" style="margin-left: 11px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Quận/Huyện</label>
-                            <input type="text" placeholder="Chọn Quận/Huyện">
-                        </div>
-                        <div class="control_group">
-                            <label>Phường/Xã</label>
-                            <input type="text" placeholder="Chọn Phường/Xã" style="margin-left: 7px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Tên tòa nhà</label>
-                            <input type="text" placeholder="Tên tòa nhà" style="margin-left: 5px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Số nhà</label>
-                            <input type="text" placeholder="Số nhà" style="margin-left: 37px;">
-                        </div>
-                        <div class="control_group">
-                            <label>Đường</label>
-                            <input type="text" placeholder="Đường" style="margin-left: 37px;">
-                        </div>
-                        <input type="button" id="Luu" name="fname" value="Lưu">
-                        <p>Phí vận chuyển: Miễn phí</p>
-                    </div>
-                    <div id="ghi_chu_giao_hang">
+                <div id="box_info_step1">
+                    <div id="info_dia_chi_giao_hang">
                         <div id="tt_dia_chi">
-                            GHI CHÚ GIAO HÀNG
+                            Địa chỉ giao hàng
                         </div>
-                        <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Ghi chú"></textarea>
+                        <div id="data_ct_address">
+                            <div class="control_group">
+                                <label>Họ và tên</label><br>
+                                <input type="text" placeholder="Họ và tên" >
+                            </div>
+                            <div class="control_group">
+                                <label>Tỉnh</label><br>
+                                <select>
+                                    <option value="0">Hải Dương</option>
+                                    <option value="1">Hưng Yên</option>
+                                    <option value="2">Hải Phòng</option>
+                                    <option value="3">Hà Nội</option>
+                                    <option value="4">Quảng Ninh</option>
+                                    <option value="5">Hoà Bình</option>
+                                    <option value="6">Lạng Sơn</option>
+                                    <option value="7">Nghệ An</option>
+                                    <option value="8">Ninh Bình</option>
+                                    <option value="9">Quảng Ninh</option>
+                                    <option value="10">Sơn La</option>
+                                  </select>
+                            </div>
+                            <div class="control_group">
+                                <label>Địa chỉ</label><br>
+                                <input type="text" placeholder="Địa chỉ của bạn" >
+                            </div>
+                            <div class="control_group">
+                                <label>Điện thoại</label><br>
+                                <input type="text" placeholder="Số điện thoại của bạn" >
+                            </div>
+                            <div class="control_group">
+                                <label>Email</label><br>
+                                <input type="text" placeholder="Email của bạn" >
+                            </div>
+
+                        
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div id="box_info_step2">
+                    <div id="info_dia_chi_giao_hang1">
+                        <div id="tt_dia_chi1" style="padding-left: 200px;">
+                            Hình thức thanh toán
+                        </div>
+                        <div id="data_ct_address1">
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html" style="font-weight: bold;font-size: 14px;">Giao hàng và thu tiền tận nơi</label><br>
+                            <p>Nhân viên bưu điện tại địa phương sẽ giao hàng đến quí khách tại địa điểm mà quí khách đã ghi ở trên. Trong trường hợp quí khách đi vắng, vui lòng uỷ thác cho người khác nhận hàng và thanh toán tiền thay.
+                                Trong một số trường hợp nhân viên bưu điện đến phát mà không có người nhận, nhân viên bưu điện sẽ để lại tin nhắn mời khách hàng đến bưu điện nhận hàng.</p>
+                            <input type="radio" id="css" name="fav_language" value="CSS">
+                            <label for="css" style="font-weight: bold;font-size: 14px;">Thẻ ATM có Internet Banking</label><br>
+                            <p>Thanh toán bằng thẻ ATM do các ngân hàng sau phát hành và được ưu tiên xử lý đơn hàng trước (miễn phí phí thanh toán qua thẻ)<br>
+                                Lưu ý: thẻ ATM hoặc tài khoản của bạn phải đăng ký dịch vụ Internet Banking với ngân hàng mới sử dụng được hình thức thanh toán này</p>
+                            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                            <label for="javascript" style="font-weight: bold;font-size: 14px;">Thẻ VISA/Master Card/JCB</label>
+                            <p>Thanh toán bằng thẻ tín dụng Visa hoặc MasterCard và được ưu tiên xử lý đơn hàng trước. Hệ thống thanh toán qua cổng OnePay hỗ trợ tính năng bảo mật Verified By Visa và MasterCard SecureCode</p>
+                        </div>
+                    
                     </div>
                 </div>
-                <div id="box_bt_payment">
-                    <a id="bt_thanh_toan" href="ThanhToanHinhThuc.html">TIẾP TỤC</a>
-                    <a id="bt_quay_lai" href="#">QUAY LẠI</a>
+                <div id="ghi_chu_giao_hang" style="margin-left: 378px;">
+                    <div id="tt_dia_chi3">
+                        GHI CHÚ GIAO HÀNG
+                    </div>
+                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Ghi chú"></textarea>
+                    <p style="text-align: center;">Phí vận chuyển: Miễn phí</p>
+                    <div id="box_bt_payment">
+                        <a id="bt_thanh_toan" onclick="alert('Đơn Hàng đặt hàng thành công và sẽ sớm giao đến bạn')">THANH TOÁN</a>
+                        <a id="bt_quay_lai" href="#">QUAY LẠI</a>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
